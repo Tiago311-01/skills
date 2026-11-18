@@ -191,7 +191,6 @@
         const c1 = document.createElement('td'); c1.textContent = r.name;
         const c2 = document.createElement('td'); c2.textContent = r.goal;
         if (r.name === 'magic-mcp') { const w = document.createElement('div'); w.className = 'sb-warn sb-muted'; w.textContent = 'À archiver : remplacé par 21st MCP.'; c2.append(w); }
-        if (r.name === 'skills') { const w = document.createElement('div'); w.className = 'sb-warn sb-muted'; w.textContent = 'Ses skills sont une copie de some_claude_skills.'; c2.append(w); }
         const c3 = document.createElement('td'); c3.className = 'num'; c3.textContent = fmt(r.skills);
         const c4 = document.createElement('td'); c4.className = 'num'; c4.textContent = fmt(r.agents);
         row.append(c1, c2, c3, c4); tbody.append(row);

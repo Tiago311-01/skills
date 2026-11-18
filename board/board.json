@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18 21:26 UTC",
+ "generated_at": "2026-11-18 21:32 UTC",
  "categories": [
   {
    "id": "security",
@@ -77,10 +77,10 @@
   },
   {
    "name": "skills",
-   "goal": "CLI d'installation de skills (npx skills add) + copie des skills de some_claude_skills",
+   "goal": "CLI d’installation de skills (npx skills add) + skill find-skills",
    "family": "Bibliothèques de skills & agents",
    "present": true,
-   "skills": 189,
+   "skills": 1,
    "agents": 0
   },
   {
@@ -263,12 +263,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/adhd-daily-planner/SKILL.md",
    "description": "Time-blind friendly planning, executive function support, and daily structure for ADHD brains. Specializes in realistic time estimation, dopamine-aware task design, and building systems that",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -294,12 +293,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/agent-creator/SKILL.md",
    "description": "Meta-agent for creating new custom agents, skills, and MCP integrations. Expert in agent design, MCP development, skill architecture, and rapid prototyping. Activate on 'create agent', 'new",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -407,12 +405,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/ai-engineer/SKILL.md",
    "description": "Build production-ready LLM applications, advanced RAG systems, and intelligent agents. Implements vector search, multimodal AI, agent orchestration, and enterprise AI integrations. Use PROACTIVELY",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -436,12 +433,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/anthropic-technical-deep-dive/SKILL.md",
    "description": "Prepare for Anthropic-specific technical interviews covering Constitutional AI, RLHF, interpretability, scaling laws, MCP, agentic systems, and AI safety. Activate on \"anthropic interview\",",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -451,12 +447,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/automatic-stateful-prompt-improver/SKILL.md",
    "description": "Automatically intercepts and optimizes prompts using the prompt-learning MCP server. Learns from performance over time via embedding-indexed history. Uses APE, OPRO, DSPy patterns. Activate",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -554,12 +549,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/claude-ecosystem-promoter/SKILL.md",
    "description": "Marketing and promotion specialist for Claude ecosystem technology - MCP servers, skills, plugins, and agents. Expert in community engagement, registry submissions, content marketing, and developer",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -667,12 +661,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/cost-accrual-tracker/SKILL.md",
    "description": "Track real-time API cost accrual during LLM execution. Activate on 'cost tracking', 'token usage', 'API costs', 'budget monitoring', 'usage metrics'. NOT for cost estimation, pricing tiers,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -696,12 +689,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/cost-optimizer/SKILL.md",
    "description": "Tracks cumulative LLM costs across DAG execution and makes real-time decisions to stay within budget. Downgrades models, skips optional nodes, or stops early when cost exceeds thresholds. Use",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -725,12 +717,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/cost-verification-auditor/SKILL.md",
    "description": "Audit LLM token cost estimates against actual API usage. Activate on 'cost verification', 'token estimate accuracy', 'API cost audit', 'estimation variance'. NOT for pricing lookups, budget",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -798,12 +789,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/digital-estate-planner/SKILL.md",
    "description": "Organizing digital life for legacy, emergency access, and death preparedness. Specializes in password management, account documentation, digital asset preservation, and ensuring loved ones",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1013,12 +1003,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/interview-loop-strategist/SKILL.md",
    "description": "Orchestrates end-to-end interview preparation for senior ML/AI engineers targeting Anthropic and peer companies. Use for prep timeline generation, story coherence across rounds, mock scheduling,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1100,12 +1089,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/llm-router/SKILL.md",
    "description": "Selects the optimal LLM model and provider for each task based on complexity, cost budget, and capability requirements. Routes cheap tasks to Haiku/GPT-4o-mini and complex tasks to Sonnet/Opus/o1.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1143,12 +1131,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/mcp-creator/SKILL.md",
    "description": "Expert MCP (Model Context Protocol) server developer creating safe, performant, production-ready servers with proper security, error handling, and developer experience. Activate on 'create",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1260,12 +1247,11 @@
     "lang"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/nextjs-app-router-expert/SKILL.md",
    "description": "Expert in Next.js 14/15 App Router architecture, React Server Components (RSC), Server Actions, and modern full-stack React development. Specializes in routing patterns, data fetching strategies,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1347,12 +1333,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/orchestrator/SKILL.md",
    "description": "Master coordinator that delegates to specialist skills, synthesizes outputs, AND creates new skills on-the-fly when needed. Expert in problem decomposition, skill orchestration, quality assurance,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1420,12 +1405,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/prompt-engineer/SKILL.md",
    "description": "Expert prompt optimization for LLMs and AI systems. Use PROACTIVELY when building AI features, improving agent performance, or crafting system prompts. Masters prompt patterns and techniques.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1466,12 +1450,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/recursive-synthesis/SKILL.md",
    "description": "Orchestrate multi-agent collaborative document synthesis through 6 phases - Divergence, Synthesis, Commentary, Consolidation, Reality Check, Final Merge. Produces authoritative founding documents",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1509,12 +1492,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/skill-architect/SKILL.md",
    "description": "Design, create, audit, and improve Claude Agent Skills with expert-level progressive disclosure. Use when building new skills, reviewing existing skills, debugging activation failures, encoding",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1524,12 +1506,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/skill-coach/SKILL.md",
    "description": "Guides creation of high-quality Agent Skills with domain expertise, anti-pattern detection, and progressive disclosure best practices. Activate on keywords: create skill, review skill, skill",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1553,12 +1534,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/skill-creator/SKILL.md",
    "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1570,12 +1550,11 @@
     "content"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/skill-documentarian/SKILL.md",
    "description": "Documentation expert for Claude Skills showcase website. Maintains skill-to-website sync, manages tag taxonomy and badges, creates blog-style artifacts, and preserves multi-skill collaborations",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1585,12 +1564,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/skill-grader/SKILL.md",
    "description": "Evaluates Claude Agent Skills on 10 quality axes with letter grades (A+ through F) and specific improvement recommendations. Use when auditing a skill, comparing skills, prioritizing improvements,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1614,12 +1592,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/skill-logger/SKILL.md",
    "description": "Logs and scores skill usage quality, tracking output effectiveness, user satisfaction signals, and improvement opportunities. Expert in skill analytics, quality metrics, feedback loops, and",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1659,12 +1636,11 @@
    "category": "ai",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/skillful-subagent-creator/SKILL.md",
    "description": "Creates Claude subagents equipped with curated skills for solving problems within DAG workflows. Use when designing a specialist subagent, selecting skills for a subagent, writing the 4-section",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1690,12 +1666,11 @@
     "lang"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/task-decomposer/SKILL.md",
    "description": "Breaks natural-language problem descriptions into sub-tasks suitable for DAG nodes. The entry point of the meta-DAG. Identifies phases, dependencies, parallelization opportunities, and vague/pluripotent",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1749,12 +1724,11 @@
     "content"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/ultimate-seo-geo-skill/SKILL.md",
    "description": "Use this skill when running SEO audits, optimizing for AI search engines (AI Overviews, ChatGPT, Perplexity), generating schema markup, diagnosing traffic drops, fixing Core Web Vitals, managing site migrations, or building keyword strategies. Runs scored full-site audits (0-100 Health Score) across 21 modules including technical SEO, E-E-A-T, hreflang, and programmatic SEO. Three modes: Audit, Pl",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1895,12 +1869,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/api-architect/SKILL.md",
    "description": "Expert API designer for REST, GraphQL, gRPC architectures. Activate on: API design, REST API, GraphQL schema, gRPC service, OpenAPI, Swagger, API versioning, endpoint design, rate limiting,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1969,12 +1942,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/background-job-orchestrator/SKILL.md",
    "description": "Expert in background job processing with Bull/BullMQ (Redis), Celery, and cloud queues. Implements retries, scheduling, priority queues, and worker management. Use for async task processing,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1984,12 +1956,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/bot-developer/SKILL.md",
    "description": "Expert bot developer specializing in Discord, Telegram, Slack automation with deep knowledge of rate limiting, state machines, event sourcing, moderation systems, and conversational AI integration.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -1999,12 +1970,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/caching-strategies/SKILL.md",
    "description": "Design multi-tier caching architectures for web applications — cache-aside vs write-through vs write-behind, TTL design, cache invalidation, Redis patterns, CDN configuration, browser caching,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2042,12 +2012,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/code-architecture/SKILL.md",
    "description": "Application architecture patterns and code organization — clean architecture, hexagonal architecture, feature-based structure, dependency inversion, module boundaries, SOLID principles at module",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2087,12 +2056,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/database-design-patterns/SKILL.md",
    "description": "Schema design, normalization decisions, indexing strategies, and migration safety for relational databases. Use when designing tables, choosing between normalize vs denormalize, selecting index",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2118,12 +2086,11 @@
     "security"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/dependency-management/SKILL.md",
    "description": "Managing third-party dependencies — version pinning, security auditing, license compliance, update workflows, lockfile management, supply chain security. Activate on \"npm audit\", \"dependabot\",",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2135,12 +2102,11 @@
     "lang"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/drizzle-migrations/SKILL.md",
    "description": "Drizzle ORM schema management and SQLite migrations — adding tables, modifying columns, creating indexes, generating and running migrations, Drizzle query patterns. NOT for Prisma, TypeORM,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2168,12 +2134,11 @@
     "lang"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/error-handling-patterns/SKILL.md",
    "description": "Design error handling strategies for TypeScript and Python applications — exception hierarchies, Result/Either types, retry patterns, error boundaries, and structured error logging. Use when",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2183,12 +2148,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/event-detection-temporal-intelligence-expert/SKILL.md",
    "description": "Expert in temporal event detection, spatio-temporal clustering (ST-DBSCAN), and photo context understanding. Use for detecting photo events, clustering by time/location, shareability prediction,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2212,12 +2176,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/form-validation-architect/SKILL.md",
    "description": "End-to-end form handling with react-hook-form, Zod schemas, validation patterns, error messaging, field arrays, and multi-step wizards. Use for complex forms, validation architecture, autosave,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2271,12 +2234,11 @@
     "ai"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/llm-streaming-response-handler/SKILL.md",
    "description": "Build production LLM streaming UIs with Server-Sent Events, real-time token display, cancellation, error recovery. Handles OpenAI/Anthropic/Claude streaming APIs. Use for chatbots, AI assistants,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2286,12 +2248,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/microservices-patterns/SKILL.md",
    "description": "Microservice architecture patterns — service decomposition, inter-service communication, API gateway, saga pattern, event-driven architecture, service mesh, circuit breaker, CQRS, event sourcing.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2301,12 +2262,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/modern-auth-2026/SKILL.md",
    "description": "Modern authentication implementation for 2026 - passkeys (WebAuthn), OAuth (Google, Apple), magic links, and cross-device sync. Use for passwordless-first authentication, social login setup,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2316,12 +2276,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/monorepo-management/SKILL.md",
    "description": "Monorepo tooling, task orchestration, and workspace architecture for JavaScript/TypeScript repositories. Use when setting up Turborepo, Nx, pnpm workspaces, or npm workspaces; designing package",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2345,12 +2304,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/oauth-oidc-implementer/SKILL.md",
    "description": "Expert in implementing OAuth 2.0 and OpenID Connect (OIDC) authentication flows. Specializes in secure token handling, social login integration, API authorization, and identity provider configuration.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2360,12 +2318,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/openapi-spec-writer/SKILL.md",
    "description": "Expert in writing OpenAPI 3.0/3.1 specifications for REST APIs. Specializes in schema design, documentation best practices, API-first development, and tooling integration. Generates comprehensive",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2389,12 +2346,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/postgresql-optimization/SKILL.md",
    "description": "Expert in PostgreSQL performance tuning, query optimization, and database administration. Specializes in EXPLAIN analysis, indexing strategies, connection pooling, partitioning, and production-grade",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2436,12 +2392,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/real-time-collaboration-engine/SKILL.md",
    "description": "Build real-time collaborative editing with WebSockets, OT/CRDT conflict resolution, and presence awareness. Implements cursor tracking, optimistic updates, and offline sync. Use for collaborative",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2465,12 +2420,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/rest-api-design/SKILL.md",
    "description": "Design REST API endpoints with Zod validation and OpenAPI documentation. Use when creating new API routes, validating request/response schemas, or updating API documentation. Activates for",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2480,12 +2434,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/supabase-admin/SKILL.md",
    "description": "Supabase administration, RLS policies, migrations, and schema design. Use for database architecture, Row Level Security, performance tuning, auth integration. Activate on \"Supabase\", \"RLS\",",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2495,12 +2448,11 @@
    "category": "archi",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/websocket-streaming/SKILL.md",
    "description": "Implements real-time bidirectional communication between DAG execution engines and visualization dashboards via WebSocket. Covers connection management, typed event protocols, reconnection",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2540,12 +2492,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/ai-video-production-master/SKILL.md",
    "description": "Expert in script-to-video production pipelines for Apple Silicon Macs. Specializes in hybrid local/cloud workflows, LoRA training for character consistency, motion graphics generation, and",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2555,12 +2506,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/boss-whisperer/SKILL.md",
    "description": "Reverse-engineers your manager from pasted comms — an email thread, Slack history, or a described situation — to show what they actually want, how to manage up, and where the politics sit. Two tiers: a fast anonymised read on what you paste, or an opt-in deep dossier adding public research on the named boss. Gottman communication analysis plus Munger misjudgment inversion. Activate on 'decode my b",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2570,12 +2520,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/career-biographer/SKILL.md",
    "description": "AI-powered career biographer that conducts empathetic interviews, extracts structured career narratives, and transforms professional stories into portfolios, CVs, and personal brand assets.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2601,12 +2550,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/competitive-cartographer/SKILL.md",
    "description": "Strategic analyst that maps competitive landscapes, identifies white space opportunities, and provides positioning recommendations. Use when users need competitive analysis, market positioning",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2674,12 +2622,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/cv-creator/SKILL.md",
    "description": "Professional CV and resume builder transforming career narratives into ATS-optimized, multi-format resumes. Integrates with career-biographer for data and competitive-cartographer for positioning.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2761,12 +2708,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/hiring-manager-deep-dive/SKILL.md",
    "description": "Prepares for hiring manager rounds at Staff+ (L6+) level — scope of impact, influence without authority, ambiguity navigation, mentorship, strategic thinking. Use when practicing HM rounds",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2776,12 +2722,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/indie-monetization-strategist/SKILL.md",
    "description": "Monetization strategies for indie developers, solopreneurs, and small teams. Covers freemium models, SaaS pricing, sponsorships, donations, email list building, and passive income for developer",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2805,12 +2750,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/interview-simulator/SKILL.md",
    "description": "Designs and orchestrates a realistic interview simulation platform with voice AI, whiteboard evaluation, gaze-tracking proctoring, and mobile spaced repetition. Use for building mock interview",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2878,12 +2822,11 @@
     "content"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/job-application-optimizer/SKILL.md",
    "description": "Strategic job application planning and Resume SEO optimization. Approaches applications like marketing campaigns with market research, opportunity qualification, and content optimization. Activate",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2893,12 +2836,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/launch-readiness-auditor/SKILL.md",
    "description": "Expert at evaluating software projects for production readiness. Assesses codebases holistically to determine what's shippable, what's blocking launch, and how to get from current state to",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -2970,12 +2912,11 @@
     "ai"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/ml-system-design-interview/SKILL.md",
    "description": "Coaches end-to-end ML system design interviews covering inference pipelines, recommendation systems, RAG, feature stores, and monitoring. Use for L6+ design rounds, ML architecture whiteboarding,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3015,12 +2956,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/product-appeal-analyzer/SKILL.md",
    "description": "Evaluate product desirability, market positioning, and emotional resonance—the complement to friction analysis. Assess whether users will WANT a product (not just use it), identity fit, trust",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3104,12 +3044,11 @@
     "life"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/project-management-guru-adhd/SKILL.md",
    "description": "Expert project manager for ADHD engineers managing multiple concurrent projects. Specializes in hyperfocus management, context-switching minimization, and parakeet-style gentle reminders. Activate",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3147,12 +3086,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/senior-coding-interview/SKILL.md",
    "description": "Prepare for L6+ coding interviews — in-memory databases, concurrency, state management, iterative follow-ups. Use when practicing real-world system-building problems or preparing communication",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3177,8 +3115,7 @@
    "also": [],
    "repos": [
     "ECC",
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "ECC/skills/team-builder/SKILL.md",
    "description": "Interactive picker that discovers available agent personas via the claude agents command and agents/ markdown globs, groups them into domains, has the user select up to five, dispatches them in parallel on one task, and synthesizes agreements and conflicts into a unified report. Use when composing a team of agents, browsing available agent personas, or running several specialist agents in parallel",
@@ -3192,12 +3129,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/tech-presentation-interview/SKILL.md",
    "description": "Prepares for \"reverse system design\" rounds where you present YOUR past technical work. Use for project selection, narrative arc structuring, whiteboard diagrams, depth calibration, and hostile",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3207,12 +3143,11 @@
    "category": "business",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/values-behavioral-interview/SKILL.md",
    "description": "Coaches behavioral and values-fit interview preparation with negative framing, deep follow-ups, introspection, and mission alignment. Use for culture-fit rounds, Anthropic behavioral prep,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3364,12 +3299,11 @@
    "category": "content",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/2026-legal-research-agent/SKILL.md",
    "description": "Expert legal research agent for finding and scraping expungement data state by state. Knows authoritative sources, URL patterns, Firecrawl configuration, and 2026 legal landscape. Activate",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3465,12 +3399,11 @@
    "category": "content",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/document-generation-pdf/SKILL.md",
    "description": "Generate, fill, and assemble PDF documents at scale. Handles legal forms, contracts, invoices, certificates. Supports form filling (pdf-lib), template rendering (Puppeteer, LaTeX), digital",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3494,12 +3427,11 @@
    "category": "content",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/email-composer/SKILL.md",
    "description": "Draft professional emails for various contexts including business, technical, and customer communication. Use when the user needs help writing emails or composing professional messages.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3586,12 +3518,11 @@
    "category": "content",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/liaison/SKILL.md",
    "description": "Translate multi-agent ecosystem activity into human-readable status briefings, decision requests, and progress summaries. Use for 'status update', 'brief me', 'what happened', 'summarize progress'.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3657,12 +3588,11 @@
    "category": "content",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/mdx-sanitizer/SKILL.md",
    "description": "Sanitize MDX content for Docusaurus builds. Fixes unescaped angle brackets (<, >, &lt;=, &gt;=), Liquid/Nunjucks template syntax ({{ }}), TypeScript generics (Promise&lt;T&gt;), and inline code backtick edge cases. Use when pre-commit hooks fail on bracket or Liquid validation, or when MDX/JSX build errors reference unexpected tokens. NOT for general markdown linting or prose editing.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3686,12 +3616,11 @@
    "category": "content",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/research-analyst/SKILL.md",
    "description": "Conducts thorough landscape research, competitive analysis, best practices evaluation, and evidence-based recommendations. Expert in market research and trend analysis.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3701,12 +3630,11 @@
    "category": "content",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/research-craft/SKILL.md",
    "description": "Systematic research methodology for formulating problems, building evidence-based arguments, and communicating findings in academic contexts. For scholarly writing, thesis development, and",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3758,12 +3686,11 @@
    "category": "content",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/seo-visibility-expert/SKILL.md",
    "description": "Comprehensive SEO, discoverability, and AI crawler optimization for web projects. Use for technical SEO audits, llms.txt/robots.txt setup, schema markup, social launch strategies (Product Hunt,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3787,12 +3714,11 @@
    "category": "content",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/technical-writer/SKILL.md",
    "description": "Expert technical documentation specialist for developer docs, API references, and runbooks. Activate on: documentation, docs, README, API reference, technical writing, user guide, runbook,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3802,12 +3728,11 @@
    "category": "content",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/very-long-text-summarization/SKILL.md",
    "description": "Summarizes very long texts (books, handbooks, biographies, codebases) using hierarchical multi-pass extraction with cheap model armies. Produces structured knowledge maps, not just summaries.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3845,12 +3770,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/admin-dashboard/SKILL.md",
    "description": "Extend and modify the admin dashboard, developer portal, and operations console. Use when adding new admin tabs, metrics, monitoring features, or internal tools. Activates for dashboard development,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3860,12 +3784,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/chatbot-analytics/SKILL.md",
    "description": "Implement AI chatbot analytics and conversation monitoring. Use when adding conversation metrics, tracking AI usage, measuring user engagement with chat, or building conversation dashboards.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3877,12 +3800,11 @@
     "ai"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/clip-aware-embeddings/SKILL.md",
    "description": "Semantic image-text matching with CLIP and alternatives. Use for image search, zero-shot classification, similarity matching. NOT for counting objects, fine-grained classification (celebrities,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3892,12 +3814,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/computer-vision-pipeline/SKILL.md",
    "description": "Build production computer vision pipelines for object detection, tracking, and video analysis. Handles drone footage, wildlife monitoring, and real-time detection. Supports YOLO, Detectron2,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3921,12 +3842,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/data-pipeline-engineer/SKILL.md",
    "description": "Expert data engineer for ETL/ELT pipelines, streaming, data warehousing. Activate on: data pipeline, ETL, ELT, data warehouse, Spark, Kafka, Airflow, dbt, data modeling, star schema, streaming",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3966,12 +3886,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/data-viz-2025/SKILL.md",
    "description": "State-of-the-art data visualization for React/Next.js/TypeScript with Tailwind CSS. Creates compelling, tested, and accessible visualizations following Tufte principles and NYT Graphics standards.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3981,12 +3900,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/diagramming-expert/SKILL.md",
    "description": "Master of text-based visual communication using ASCII art, Unicode box-drawing, and structured diagram notation. Creates clear, maintainable diagrams for systems, processes, hierarchies, relationships,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -3996,12 +3914,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/drone-cv-expert/SKILL.md",
    "description": "Expert in drone systems, computer vision, and autonomous navigation. Specializes in flight control, SLAM, object detection, sensor fusion, and path planning. Activate on \"drone\", \"UAV\", \"SLAM\",",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4011,12 +3928,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/feature-manifest/SKILL.md",
    "description": "Manage feature manifests for code traceability — create features, validate manifest health, map features to code, update changelogs. Activates for 'feature manifest', 'feature tracking', 'code",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4026,12 +3942,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/geospatial-data-pipeline/SKILL.md",
    "description": "Process, analyze, and visualize geospatial data at scale. Handles drone imagery, GPS tracks, GeoJSON optimization, coordinate transformations, and tile generation. Use for mapping apps, drone",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4041,12 +3956,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/hand-drawn-infographic-creator/SKILL.md",
    "description": "Generate hand-drawn style diagrams and infographics for recovery education articles. Creates anatomist's notebook aesthetic visuals - brain diagrams, timelines, social comparisons, and process",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4056,12 +3970,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/large-scale-map-visualization/SKILL.md",
    "description": "Master of high-performance web map implementations handling 5,000-100,000+ geographic data points. Specializes in Leaflet.js optimization, Supercluster algorithms, viewport-based loading, canvas",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4073,12 +3986,11 @@
     "video"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/mermaid-graph-renderer/SKILL.md",
    "description": "Renders Mermaid diagrams to SVG, PNG, and PDF in both web and offline contexts. Covers client-side lazy loading, SSR trade-offs, CLI batch export, and native Rust rendering. Use when exporting",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4088,12 +4000,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/mermaid-graph-writer/SKILL.md",
    "description": "Writes precise, well-structured Mermaid diagrams for any visualization need. Use when creating flowcharts, sequence diagrams, state machines, ER models, timelines, mindmaps, Gantt charts, or",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4103,12 +4014,11 @@
    "category": "data",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/pixel-art-infographic-creator/SKILL.md",
    "description": "Generate pixel art diagrams and infographics in retro 16-bit SNES aesthetic — recovery education visuals, flowcharts, data visualizations, process diagrams with dithering and limited palettes.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4250,12 +4160,11 @@
     "life"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/adhd-design-expert/SKILL.md",
    "description": "Designs digital experiences for ADHD brains using neuroscience research and UX principles. Expert in reducing cognitive load, time blindness solutions, dopamine-driven engagement, and compassionate",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4279,12 +4188,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/collage-layout-expert/SKILL.md",
    "description": "Expert in ALL computational collage composition: photo mosaics, grid layouts, scrapbook/journal styles, magazine editorial, vision boards, mood boards, social media collages, memory walls,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4294,12 +4202,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/color-contrast-auditor/SKILL.md",
    "description": "Detects and fixes color contrast violations using WCAG 2.1 guidelines and perceptual analysis. Expert in contrast ratio calculation, color blindness simulation, and providing accessible alternatives.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4309,12 +4216,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/color-theory-palette-harmony-expert/SKILL.md",
    "description": "Expert in color theory, palette harmony, and perceptual color science for computational photo composition. Specializes in earth-mover distance optimization, warm/cool alternation, diversity-aware",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4324,12 +4230,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/component-template-generator/SKILL.md",
    "description": "Generates starter component code using design tokens. Creates React/Vue/Svelte components with proper token usage, variants, and accessibility built in.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4339,12 +4244,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/dark-mode-design-expert/SKILL.md",
    "description": "Master dark mode UI design with atmospheric theming, WCAG accessibility, and cross-platform best practices. Specializes in weather/sky/ocean-inspired color systems that adapt to time of day",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4354,12 +4258,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/design-accessibility-auditor/SKILL.md",
    "description": "Audit designs, color palettes, and UI components for WCAG 2.1 accessibility compliance, providing specific fixes for contrast, touch targets, focus indicators, and screen reader support. NOT for color harmony aesthetics or design system creation.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4369,12 +4272,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/design-archivist/SKILL.md",
    "description": "Long-running design anthropologist that builds comprehensive visual databases from 500-1000 real-world examples, extracting color palettes, typography patterns, layout systems, and interaction",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4384,12 +4286,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/design-critic/SKILL.md",
    "description": "Aesthetic assessment and remix partner with trained visual taste. Provides structured design critiques using a 6-dimension scoring system inspired by VisualQuality-R1 chain-of-thought reasoning.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4399,12 +4300,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/design-justice/SKILL.md",
    "description": "Digital equity and trauma-informed design for marginalized populations. Activate on \"accessibility\", \"offline-first\", \"trauma-informed\", \"reentry\", \"recovery population\", \"shared device\", \"unstable",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4430,12 +4330,11 @@
     "business"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/design-system-creator/SKILL.md",
    "description": "Builds comprehensive design systems and design bibles with production-ready CSS. Expert in design tokens, component libraries, CSS architecture. Use for design system creation, token architecture,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4447,12 +4346,11 @@
     "content"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/design-system-documenter/SKILL.md",
    "description": "Creates comprehensive documentation for design systems - token tables, usage guidelines, component examples, and accessibility notes. Use after generating tokens to create developer-friendly",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4462,12 +4360,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/design-system-generator/SKILL.md",
    "description": "Design system generator that matches natural language descriptions to design trends. Expert in Swiss Modern, Neobrutalism, Glassmorphism, and 20+ other design trends. Includes trend matching",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4477,12 +4374,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/design-trend-analyzer/SKILL.md",
    "description": "Analyze design trends and recommend appropriate styles, color palettes, and typography systems for your project based on current design movements. NOT for accessibility auditing or full design system creation.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4492,12 +4388,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/fancy-yard-landscaper/SKILL.md",
    "description": "Expert landscape designer transforming yards through photo mapping, 3D visualization, seasonal planning, and deep plant knowledge. Specializes in fast-growing privacy screens (knows arborvitae",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4521,12 +4416,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/frontend-architect/SKILL.md",
    "description": "Frontend stack expert for Cloudflare deployment, shadcn/ui components, and internal tools architecture. Guides technology choices, deployment patterns, and design system integration.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4581,12 +4475,11 @@
     "life"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/human-centered-design-fundamentals/SKILL.md",
    "description": "Apply cognitive psychology principles to design discoverable, understandable products through affordances, signifiers, feedback, and conceptual models. For physical and digital interfaces requiring",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4598,12 +4491,11 @@
     "business"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/human-gate-designer/SKILL.md",
    "description": "Designs human-in-the-loop review points for DAG workflows. Determines what to present to the human, how to collect feedback, and how to route approve/reject/modify decisions back into the DAG.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4613,12 +4505,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/interior-design-expert/SKILL.md",
    "description": "Expert interior designer with deep knowledge of space planning, color theory (Munsell, NCS), lighting design (IES standards), furniture proportions, and AI-assisted visualization. Use for room",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4656,12 +4547,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/maximalist-wall-decorator/SKILL.md",
    "description": "Expert in maximalist interior wall decoration including bold color choices, freehand paintings, statement wallpapers, eclectic lamp arrangements, gallery walls, and curated chaos. Embraces",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4671,12 +4561,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/mobile-ux-optimizer/SKILL.md",
    "description": "Mobile-first UX optimization for touch interfaces, responsive layouts, and performance. Use for viewport handling, touch targets, gestures, mobile navigation. Activate on mobile, touch, responsive,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4686,12 +4575,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/native-app-designer/SKILL.md",
    "description": "Creates breathtaking iOS/Mac and web apps with organic, non-AI aesthetic. Expert in SwiftUI, React animations, physics-based motion, and human-crafted design. Use for iOS/Mac app UI, React/Vue",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4701,12 +4589,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/neobrutalist-web-designer/SKILL.md",
    "description": "Modern web applications with authentic neobrutalist aesthetic. Bold typography, hard shadows (no blur), thick black borders, high-contrast primary colors, raw visual tension. Extrapolates neobrutalism",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4749,12 +4636,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/photo-composition-critic/SKILL.md",
    "description": "Expert photography composition critic grounded in graduate-level visual aesthetics education, computational aesthetics research (AVA, NIMA, LAION-Aesthetics, VisualQuality-R1), and professional",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4766,12 +4652,11 @@
     "content"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/photo-content-recognition-curation-expert/SKILL.md",
    "description": "Expert in photo content recognition, intelligent curation, and quality filtering. Specializes in face/animal/place recognition, perceptual hashing for de-duplication, screenshot/meme detection,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4781,12 +4666,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/pixel-art-scaler/SKILL.md",
    "description": "Deterministic pixel art upscaling using EPX/Scale2x, hq2x/hq4x, and xBR algorithms that add valid sub-pixels through pattern recognition. Activate on 'pixel art scaling', 'EPX', 'Scale2x',",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4796,12 +4680,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/pwa-expert/SKILL.md",
    "description": "Progressive Web App development with Service Workers, offline support, and app-like behavior. Use for caching strategies, install prompts, push notifications, background sync. Activate on \"PWA\",",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4825,12 +4708,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/swiss-modern-web-designer/SKILL.md",
    "description": "Modern web applications with authentic Swiss International Typographic Style. Mathematical grid systems, strict typographic hierarchy, generous whitespace, objective clarity. Extrapolates",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4888,12 +4770,11 @@
     "review"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/typography-expert/SKILL.md",
    "description": "Working type director's reference for selecting, pairing, and shipping typefaces with real taste. Covers a broad, opinionated catalog of typefaces and foundries (libre through commercial), a mood/era/register-driven selection framework that never collapses to one answer, font pairing as logic, fluid type scales, variable-font axes (incl. opsz/GRAD), OpenType features, web-font performance (subsett",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4931,12 +4812,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/ux-friction-analyzer/SKILL.md",
    "description": "Comprehensive UX analysis using cognitive psychology, ADHD-friendly design, Gestalt principles, and flow state engineering. Specializes in friction audits, user journey simulation, cognitive",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4946,12 +4826,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/vaporwave-glassomorphic-ui-designer/SKILL.md",
    "description": "Vaporwave + glassomorphic UI designer for photo/memory apps. Masters SwiftUI Material effects, neon pastels, frosted glass blur, retro-futuristic design. Expert in 2025 UI trends (glassmorphism,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4961,12 +4840,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/vibe-matcher/SKILL.md",
    "description": "Synesthete designer that translates emotional vibes and brand keywords into concrete visual DNA (colors, typography, layouts, interactions). Use when users describe desired \"feel\" (edgy, trustworthy,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4976,12 +4854,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/vr-avatar-engineer/SKILL.md",
    "description": "Expert in photorealistic and stylized VR avatar systems for Apple Vision Pro, Meta Quest, and cross-platform metaverse. Specializes in facial tracking (52+ blend shapes), subsurface scattering,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -4993,12 +4870,11 @@
     "business"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/web-cloud-designer/SKILL.md",
    "description": "Creates realistic cloud effects for web using SVG filters (feTurbulence, feDisplacementMap), CSS animations, and layering techniques. Use for atmospheric backgrounds, weather effects, skyboxes,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -5008,12 +4884,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/web-design-expert/SKILL.md",
    "description": "Creates unique web designs with brand identity, color palettes, typography, and modern UI/UX patterns. Use for brand identity development, visual design systems, layout composition, and responsive",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -5025,12 +4900,11 @@
     "business"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/web-wave-designer/SKILL.md",
    "description": "Creates realistic ocean and water wave effects for web using SVG filters (feTurbulence, feDisplacementMap), CSS animations, and layering techniques. Use for ocean backgrounds, underwater distortion,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -5040,12 +4914,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/win31-audio-design/SKILL.md",
    "description": "Expert in Windows 3.1 era sound vocabulary for modern web/mobile apps. Creates satisfying retro UI sounds using CC-licensed 8-bit audio, Web Audio API, and haptic coordination. Activate on",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -5055,12 +4928,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/win31-pixel-art-designer/SKILL.md",
    "description": "Expert in Windows 3.1 era pixel art and graphics. Creates icons, banners, splash screens, and UI assets with authentic 16/256-color palettes, dithering patterns, and Program Manager styling.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -5070,12 +4942,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/windows-3-1-web-designer/SKILL.md",
    "description": "Modern web applications with authentic Windows 3.1 aesthetic. Solid navy title bars, Program Manager navigation, beveled borders, single window controls. Extrapolates Win31 to AI chatbots (Cue",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -5085,12 +4956,11 @@
    "category": "design",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/windows-95-web-designer/SKILL.md",
    "description": "Modern web applications with authentic Windows 95 aesthetic. Gradient title bars, Start menu paradigm, taskbar patterns, 3D beveled chrome. Extrapolates Win95 to AI chatbots, mobile UIs, responsive",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -5817,12 +5687,11 @@
    "category": "lang",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/react-performance-optimizer/SKILL.md",
    "description": "Optimize React apps for 60fps performance. Implements memoization, virtualization, code splitting, bundle optimization. Use for slow renders, large lists, bundle bloat. Activate on \"React performance\",",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -5834,12 +5703,11 @@
     "data"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/reactflow-expert/SKILL.md",
    "description": "Builds DAG visualizations using ReactFlow v12 with custom nodes, ELKjs auto-layout, Zustand state management, and live state updates via WebSocket. Use when implementing workflow visualization",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -5851,12 +5719,11 @@
     "data"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/reactive-dashboard-performance/SKILL.md",
    "description": "Expert in building blazing-fast reactive dashboards with comprehensive testing. Masters React performance patterns, testing strategies for async components, and real-world patterns from Linear,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -5964,12 +5831,11 @@
    "category": "lang",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/swift-executor/SKILL.md",
    "description": "Rapid task execution without hesitation or deterrence. Expert in overcoming blockers, making quick decisions, and maintaining forward momentum. Use for urgent tasks, breaking through impediments,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6007,12 +5873,11 @@
    "category": "lang",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/typescript-advanced-patterns/SKILL.md",
    "description": "Advanced TypeScript type system patterns for production codebases. [What: branded types for nominal typing, discriminated unions, template literal types, conditional types, the infer keyword,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6064,12 +5929,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/clinical-diagnostic-reasoning/SKILL.md",
    "description": "Identify and counteract cognitive biases in medical decision-making through systematic error analysis and contextual algorithm application. For diagnostic reasoning, treatment decisions, and",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6093,12 +5957,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/crisis-detection-intervention-ai/SKILL.md",
    "description": "Detect crisis signals in user content using NLP, mental health sentiment analysis, and safe intervention protocols. Implements suicide ideation detection, automated escalation, and crisis resource",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6108,12 +5971,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/crisis-response-protocol/SKILL.md",
    "description": "Handle mental health crisis situations in AI coaching safely. Use when implementing crisis detection, safety protocols, emergency escalation, or suicide prevention features. Activates for crisis",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6123,12 +5985,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/grief-companion/SKILL.md",
    "description": "Compassionate bereavement support, memorial creation, grief education, and healing journey guidance. Specializes in understanding grief stages, creating meaningful tributes, and supporting",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6166,12 +6027,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/hinge-profile-optimizer/SKILL.md",
    "description": "Comprehensive, research-backed Hinge dating profile optimization. Audits an existing profile, runs a discovery interview, writes prompts and captions, orders photos strategically, and gives post-launch algorithm strategy. Grounded in peer-reviewed behavioral research (Toma, Donath, Bruch & Newman) and signaling theory, not vibes. Activate on 'hinge profile', 'dating profile help', 'why am I not ge",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6181,12 +6041,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/hrv-alexithymia-expert/SKILL.md",
    "description": "Heart rate variability biometrics and emotional awareness training. Expert in HRV analysis, interoception training, biofeedback, and emotional intelligence. Activate on 'HRV', 'heart rate variability',",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6196,12 +6055,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/jungian-psychologist/SKILL.md",
    "description": "Expert in Jungian analytical psychology, depth psychology, shadow work, archetypal analysis, dream interpretation, active imagination, addiction/recovery through Jungian lens, and the individuation",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6211,12 +6069,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/knot-theory-educator/SKILL.md",
    "description": "Expert in visualizing and explaining braid theory, knot mathematics, and topological concepts for educational purposes. Use for creating interactive visualizations, explainer cards, step-wise",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6226,12 +6083,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/modern-drug-rehab-computer/SKILL.md",
    "description": "Comprehensive knowledge system for addiction recovery environments, supporting both residential and outpatient (IOP/PHP) patients. Expert in evidence-based treatment modalities (CBT, DBT, MI,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6241,12 +6097,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/munger-worldly-wisdom/SKILL.md",
    "description": "Multidisciplinary decision-making using mental models from psychology, economics, mathematics, and science to identify high-conviction opportunities and avoid cognitive biases. Keywords: latticework,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6258,12 +6113,11 @@
     "ai"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/panic-room-finder/SKILL.md",
    "description": "Expert in residential hollow space detection, hidden room discovery, and safe room planning. Helps map house dimensions, identify anomalies suggesting hidden spaces, and safely explore potential",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6273,12 +6127,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/partner-text-coach/SKILL.md",
    "description": "Real-time communication coach for navigating partner/relationship texts. Analyzes incoming messages for emotional subtext, suggests thoughtful responses, helps de-escalate conflict, and provides",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6288,12 +6141,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/personal-finance-coach/SKILL.md",
    "description": "Expert personal finance coach with deep knowledge of tax optimization, investment theory (MPT, factor investing), retirement mathematics (Trinity Study, SWR research), and wealth-building strategies",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6303,12 +6155,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/pet-memorial-creator/SKILL.md",
    "description": "Compassionate support for pet loss, memorial creation, and honoring the bond between humans and their animal companions. Specializes in tribute writing, keepsake ideas, and navigating the unique",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6318,12 +6169,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/sober-addict-protector/SKILL.md",
    "description": "Daily protection and relapse prevention companion for people in recovery. Expert in identifying high-risk situations, managing triggers, maintaining accountability, encouraging therapy/couples",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6335,12 +6185,11 @@
     "business"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/tech-entrepreneur-coach-adhd/SKILL.md",
    "description": "Big tech ML engineer to indie founder transition coach. Expert in idea validation, MVP development, marketing, monetization, and sustainable growth for ADHD entrepreneurs. Activate on 'entrepreneur',",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6350,12 +6199,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/wedding-immortalist/SKILL.md",
    "description": "Transform thousands of wedding photos and hours of footage into an immersive 3D Gaussian Splatting experience with theatre mode replay, face-clustered guest roster, and AI-curated best photos",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6365,12 +6213,11 @@
    "category": "life",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/wisdom-accountability-coach/SKILL.md",
    "description": "Longitudinal memory tracking, philosophy teaching, and personal accountability with compassion. Expert in pattern recognition, Stoicism/Buddhism, and growth guidance. Activate on 'accountability',",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6424,12 +6271,11 @@
    "category": "ops",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/checklist-discipline/SKILL.md",
    "description": "Design and implement systematic checklists that reduce errors by 30-50% in complex, high-stakes domains (medicine, aviation, construction, finance). NOT for simple tasks or when comprehensive",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6453,12 +6299,11 @@
    "category": "ops",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/cloudflare-worker-dev/SKILL.md",
    "description": "Cloudflare Workers, KV, Durable Objects, and edge computing development. Use for serverless APIs, caching, rate limiting, real-time features. Activate on \"Workers\", \"KV\", \"Durable Objects\",",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6498,12 +6343,11 @@
    "category": "ops",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/devops-automator/SKILL.md",
    "description": "Expert DevOps engineer for CI/CD, IaC, Kubernetes, and deployment automation. Activate on: CI/CD, GitHub Actions, Terraform, Docker, Kubernetes, Helm, ArgoCD, GitOps, deployment pipeline,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6515,12 +6359,11 @@
     "content"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/docker-containerization/SKILL.md",
    "description": "Write production-grade Dockerfiles, docker-compose configurations, multi-stage builds, and container optimization. Activate on \"Dockerfile\", \"docker\", \"docker-compose\", \"container\", \"multi-stage",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6549,12 +6392,11 @@
     "data"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/drone-inspection-specialist/SKILL.md",
    "description": "Advanced CV for infrastructure inspection including forest fire detection, wildfire precondition assessment, roof inspection, hail damage analysis, thermal imaging, and 3D Gaussian Splatting",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6599,12 +6441,11 @@
     "ai"
    ],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/git-workflow-expert/SKILL.md",
    "description": "Git branching strategies, conflict resolution, rebase workflows, monorepo patterns, and advanced operations like cherry-pick, bisect, and reflog recovery. Activate on \"git\", \"branching strategy\",",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6614,12 +6455,11 @@
    "category": "ops",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/github-actions-pipeline-builder/SKILL.md",
    "description": "Build production CI/CD pipelines with GitHub Actions. Implements matrix builds, caching, deployments, testing, security scanning. Use for automated testing, deployments, release workflows.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6729,12 +6569,11 @@
    "category": "ops",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/hr-network-analyst/SKILL.md",
    "description": "Professional network graph analyst identifying Gladwellian superconnectors, mavens, and influence brokers using betweenness centrality, structural holes theory, and multi-source network reconstruction.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6758,12 +6597,11 @@
    "category": "ops",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/logging-observability/SKILL.md",
    "description": "Structured logging, distributed tracing, and metrics for production applications. [What: OpenTelemetry setup, log level strategy, correlation IDs, SLI/SLO alerting thresholds, Grafana dashboard",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6815,12 +6653,11 @@
    "category": "ops",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/port-daddy/SKILL.md",
    "description": "Multi-agent coordination daemon for coding agents. Use for deterministic port claims, session tracking, salvage, file claims, notes, pub/sub, tuple-space coordination, background fleets, and debugging multi-agent failures across Claude Code, Codex, Gemini CLI, Cursor, or Windsurf. NOT for production deploy orchestration, Docker or Kubernetes networking, or cloud service discovery.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6861,12 +6698,11 @@
    "category": "ops",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/site-reliability-engineer/SKILL.md",
    "description": "Docusaurus build health validation and deployment safety for Claude Skills showcase. Pre-commit MDX validation (Liquid syntax, angle brackets, prop mismatches), pre-build link checking, post-build",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6876,12 +6712,11 @@
    "category": "ops",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/systems-thinking/SKILL.md",
    "description": "Analyze complex systems through stocks, flows, and feedback loops to find high-leverage interventions. For organizational, environmental, social, and technical systems exhibiting circular causality.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6921,12 +6756,11 @@
    "category": "ops",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/terraform-iac-expert/SKILL.md",
    "description": "Terraform and OpenTofu infrastructure as code — module design, state management, multi-environment setups, remote backends, secrets management, CI/CD integration. NOT for Pulumi, CDK, Ansible,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -6964,12 +6798,11 @@
    "category": "ops",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/vercel-deployment/SKILL.md",
    "description": "Deploy Next.js and React applications to Vercel — project setup, environment variables, edge functions, build troubleshooting, preview deployments, monorepo configuration. NOT for AWS/GCP/Azure",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -7535,12 +7368,11 @@
    "category": "review",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/code-necromancer/SKILL.md",
    "description": "Systematic framework for resurrecting and modernizing legacy codebases through archaeology, resurrection, and rejuvenation phases. Activate on \"legacy code\", \"inherited codebase\", \"no documentation\",",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -7550,12 +7382,11 @@
    "category": "review",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/code-review-checklist/SKILL.md",
    "description": "Generate context-aware code review checklists from PR diffs — tailored to language, codebase patterns, and team standards. Identifies what reviewers should focus on. NOT for automated code",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -7707,12 +7538,11 @@
    "category": "review",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/fullstack-debugger/SKILL.md",
    "description": "Expert debugger for Next.js + Cloudflare Workers + Supabase stacks. Systematic troubleshooting for auth, caching, workers, RLS, CORS, and build issues. Activate on: ''debug'', ''not working'',",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -7778,12 +7608,11 @@
    "category": "review",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/performance-profiling/SKILL.md",
    "description": "Application performance profiling and bottleneck identification — Node.js profiling, Chrome DevTools, flame graphs, memory leak detection, CPU profiling, React rendering performance. Activate",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -7835,12 +7664,11 @@
    "category": "review",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/refactoring-surgeon/SKILL.md",
    "description": "Expert code refactoring specialist for improving code quality without changing behavior. Activate on: refactor, code smell, technical debt, legacy code, cleanup, simplify, extract method,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -8031,8 +7859,7 @@
    "also": [],
    "repos": [
     "ECC",
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "ECC/skills/hipaa-compliance/SKILL.md",
    "description": "HIPAA-specific entrypoint for healthcare privacy and security work. Use when a task is explicitly framed around HIPAA, PHI handling, covered entities, BAAs, breach posture, or US healthcare compliance requirements.",
@@ -8088,12 +7915,11 @@
    "category": "security",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/output-contract-enforcer/SKILL.md",
    "description": "Validates that a DAG node's output matches its declared JSON schema before passing to downstream nodes. The glue that makes multi-agent DAGs reliable. Use when checking output contract compliance,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -8166,12 +7992,11 @@
    "category": "security",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/security-auditor/SKILL.md",
    "description": "Security vulnerability scanner and OWASP compliance auditor for codebases. Dependency scanning (npm audit, pip-audit), secret detection (high-entropy strings, API keys), SAST for injection/XSS",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -8543,12 +8368,11 @@
    "category": "test",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/playwright-e2e-tester/SKILL.md",
    "description": "Expert in end-to-end testing with Playwright, the modern cross-browser testing framework. Specializes in test generation, page object patterns, visual regression testing, and CI/CD integration.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -8558,12 +8382,11 @@
    "category": "test",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/playwright-screenshot-inspector/SKILL.md",
    "description": "LLM-powered visual testing expert for automated screenshot capture, analysis, and UI verification using Playwright with multimodal AI inspection.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -8701,12 +8524,11 @@
    "category": "test",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/test-automation-expert/SKILL.md",
    "description": "Comprehensive test automation specialist covering unit, integration, and E2E testing strategies. Expert in Jest, Vitest, Playwright, Cypress, pytest, and modern testing frameworks. Guides test",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -8744,12 +8566,11 @@
    "category": "test",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/vitest-testing-patterns/SKILL.md",
    "description": "Write tests using Vitest and React Testing Library. Use when creating unit tests, component tests, integration tests, or mocking dependencies. Activates for test file creation, mock patterns,",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -8759,12 +8580,11 @@
    "category": "test",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/webapp-testing/SKILL.md",
    "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -8806,12 +8626,11 @@
    "category": "video",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/2000s-visualization-expert/SKILL.md",
    "description": "Expert in 2000s-era music visualization (Milkdrop, AVS, Geiss) and modern WebGL implementations. Specializes in Butterchurn integration, Web Audio API AnalyserNode FFT data, GLSL shaders for",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -8975,12 +8794,11 @@
    "category": "video",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/metal-shader-expert/SKILL.md",
    "description": "20 years Weta/Pixar experience in real-time graphics, Metal shaders, and visual effects. Expert in MSL shaders, PBR rendering, tile-based deferred rendering (TBDR), and GPU debugging. Activate",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -9060,12 +8878,11 @@
    "category": "video",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/physics-rendering-expert/SKILL.md",
    "description": "Real-time rope/cable physics using Position-Based Dynamics (PBD), Verlet integration, and constraint solvers. Expert in quaternion math, Gauss-Seidel/Jacobi solvers, and tangling detection.",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -9159,12 +8976,11 @@
    "category": "video",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/sound-engineer/SKILL.md",
    "description": "Expert in spatial audio, procedural sound design, game audio middleware, and app UX sound design. Specializes in HRTF/Ambisonics, Wwise/FMOD integration, UI sound design, and adaptive music",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -9174,12 +8990,11 @@
    "category": "video",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/speech-pathology-ai/SKILL.md",
    "description": "Expert speech-language pathologist specializing in AI-powered speech therapy, phoneme analysis, articulation visualization, voice disorders, fluency intervention, and assistive communication",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -9220,12 +9035,11 @@
    "category": "video",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/video-processing-editing/SKILL.md",
    "description": "FFmpeg automation for cutting, trimming, concatenating videos. Audio mixing, timeline editing, transitions, effects. Export optimization for YouTube, social media. Subtitle handling, color",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -9249,12 +9063,11 @@
    "category": "video",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/voice-audio-engineer/SKILL.md",
    "description": "Expert in voice synthesis, TTS, voice cloning, podcast production, speech processing, and voice UI design via ElevenLabs integration. Specializes in vocal clarity, loudness standards (LUFS),",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   },
@@ -9278,12 +9091,11 @@
    "category": "video",
    "also": [],
    "repos": [
-    "some_claude_skills",
-    "skills"
+    "some_claude_skills"
    ],
    "path": "some_claude_skills/.claude/skills/web-weather-creator/SKILL.md",
    "description": "Master of stylized atmospheric effects using SVG filters and CSS animations. Creates clouds, waves, lightning, rain, fog, aurora borealis, god rays, lens flares, twilight skies, and ocean spray—all",
-   "duplicate": true,
+   "duplicate": false,
    "first_seen": "2026-11-18",
    "new": false
   }
@@ -9292,7 +9104,7 @@
  "stats": {
   "skills": 538,
   "agents": 85,
-  "duplicates": 189,
+  "duplicates": 3,
   "new": 0
  }
 }

@@ -4,43 +4,62 @@
     "ECC": {
       "goal": "Plugin Claude Code orienté développement : agents, commandes, hooks, règles",
       "family": "Bibliothèques de skills & agents",
-      "skills": ["ECC/skills"],
-      "agents": ["ECC/agents"]
+      "skills": [
+        "ECC/skills"
+      ],
+      "agents": [
+        "ECC/agents"
+      ]
     },
     "some_claude_skills": {
       "goal": "Collection de skills multi-domaines + Founding Council d'agents",
       "family": "Bibliothèques de skills & agents",
-      "skills": ["some_claude_skills/.claude/skills"],
-      "agents": ["some_claude_skills/.claude/agents"]
+      "skills": [
+        "some_claude_skills/.claude/skills"
+      ],
+      "agents": [
+        "some_claude_skills/.claude/agents"
+      ]
     },
     "skills": {
-      "goal": "CLI d'installation de skills (npx skills add) + copie des skills de some_claude_skills",
+      "goal": "CLI d’installation de skills (npx skills add) + skill find-skills",
       "family": "Bibliothèques de skills & agents",
-      "skills": ["skills/skills"],
+      "skills": [
+        "skills/skills"
+      ],
       "agents": []
     },
     "hyperframes": {
       "goal": "Créer des vidéos en HTML (motion design, sous-titres, rendu MP4)",
       "family": "Vidéo",
-      "skills": ["hyperframes/skills", "hyperframes/.claude/skills"],
+      "skills": [
+        "hyperframes/skills",
+        "hyperframes/.claude/skills"
+      ],
       "agents": []
     },
     "claude-video": {
       "goal": "Regarder une vidéo : images horodatées + transcription (/watch)",
       "family": "Vidéo",
-      "skills": ["claude-video/skills"],
+      "skills": [
+        "claude-video/skills"
+      ],
       "agents": []
     },
     "code-review-graph": {
       "goal": "Graphe de connaissance du code pour des revues précises via MCP",
       "family": "Serveurs MCP (contexte & outils)",
-      "skills": ["code-review-graph/skills"],
+      "skills": [
+        "code-review-graph/skills"
+      ],
       "agents": []
     },
     "magic-mcp": {
       "goal": "Composants UI via 21st.dev (remplacé par 21st MCP : relais de compatibilité)",
       "family": "Serveurs MCP (contexte & outils)",
-      "skills": ["magic-mcp/skills"],
+      "skills": [
+        "magic-mcp/skills"
+      ],
       "agents": []
     }
   }
