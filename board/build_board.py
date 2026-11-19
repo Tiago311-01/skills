@@ -50,7 +50,7 @@ CATEGORIES = [
         "orchestrat", "loop", "council", "claude", "model", "token", "context", "memory",
         "retrieval", "inference", "training", "ml", "machine learning", "ai-", "ai ", "gan",
         "subagent", "workflow", "ecc", "plan", "planner", "planning", "task", "routing", "router",
-        "cost", "vector", "weaver", "fine-tun"]),
+        "cost", "vector", "weaver", "fine-tun", "caveman", "cave", "terse"]),
     ("video", "Vidéo, audio & médias", [
         "video", "hyperframes", "remotion", "motion", "caption", "subtitle", "audio", "sound",
         "voice", "music", "speech", "media", "watch", "transcri", "frame", "slideshow", "manim",
@@ -70,7 +70,7 @@ CATEGORIES = [
         "research", "doc", "docs", "documentation", "writer", "writing", "article", "content",
         "seo", "marketing", "social", "publish", "crosspost", "email", "summar", "archiv", "librar",
         "scout", "cartograph", "liaison", "knowledge", "search", "pdf", "mdx", "i18n", "translat",
-        "localization", "legal", "x-api", "newsletter", "campaign"]),
+        "localization", "legal", "x-api", "newsletter", "campaign", "slop", "prose"]),
     ("business", "Business, carrière & ops", [
         "career", "cv", "resume", "interview", "job", "hiring", "investor", "market", "finance",
         "billing", "pricing", "monetiz", "entrepreneur", "competitive", "product", "launch",
@@ -157,6 +157,8 @@ def collect(root: Path, repo: str, rel: str, kind: str):
     items = []
     if kind == "skill":
         files = [p for p in base.glob("*/SKILL.md")]
+        if (base / "SKILL.md").is_file():  # dépôt qui est lui-même un skill (stop-slop)
+            files.append(base / "SKILL.md")
     else:
         # agents/<nom>.md (ECC) ou agents/<nom>/AGENT.md ; on ignore README.md, FOUNDING_COUNCIL.md…
         files = [p for p in base.glob("*.md") if p.stem != p.stem.upper()]

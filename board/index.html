@@ -70,7 +70,7 @@
   </div>
 
   <section class="sb-section" id="repos">
-    <h2>Les 7 dépôts, par famille</h2>
+    <h2>Les dépôts, par famille</h2>
     <div class="sb-tablewrap">
       <table data-source="repos" data-row-key="name">
         <thead><tr>
@@ -112,7 +112,7 @@
   <details class="sb-help" id="help">
     <summary>Comment le classement fonctionne</summary>
     <div>
-      <p>Chaque jour, une tâche planifiée relit les dossiers de skills et d'agents des 7 dépôts, puis range chaque élément dans la catégorie dont les mots-clés reviennent le plus dans son nom et sa description. Le nom compte trois fois plus que la description.</p>
+      <p>Chaque jour, une tâche planifiée relit les dossiers de skills et d'agents des dépôts, puis range chaque élément dans la catégorie dont les mots-clés reviennent le plus dans son nom et sa description. Le nom compte trois fois plus que la description.</p>
       <p>Les autres branches des dépôts sont lues aussi : un skill qui n'existe que sur une branche porte l'étiquette « autre branche ». Les skills des dépôts vidéo penchent vers la catégorie Vidéo.</p>
       <p>Un élément présent dans plusieurs dépôts n'apparaît qu'une fois, avec l'étiquette « double » et la liste des dépôts. Un élément absent de l'inventaire précédent porte l'étiquette « nouveau ».</p>
       <p>Les règles sont dans <code>board/build_board.py</code> et la liste des dossiers lus dans <code>board/config.json</code>, sur la branche <code>claude/vigilant-pasteur-zb4jzx</code> du dépôt <code>skills</code>.</p>
