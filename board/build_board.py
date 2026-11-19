@@ -9,6 +9,7 @@ import argparse
 import datetime as dt
 import json
 import re
+import subprocess
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -122,7 +123,11 @@ def first_paragraph(text: str) -> str:
     return ""
 
 
-def classify(name: str, desc: str, kind: str):
+# Les éléments d'un dépôt penchent vers la catégorie de sa famille (+2).
+FAMILY_BIAS = {"Vidéo": "video"}
+
+
+def classify(name: str, desc: str, kind: str, bias: str = ""):
     n = name.lower()
     d = desc.lower()
     scores = {}
@@ -135,6 +140,8 @@ def classify(name: str, desc: str, kind: str):
                 s += 1
         if s:
             scores[cid] = s
+    if bias and bias in scores:
+        scores[bias] += 2
     if not scores:
         return OTHER[0], []
     ranked = sorted(scores.items(), key=lambda kv: -kv[1])
@@ -172,6 +179,47 @@ def collect(root: Path, repo: str, rel: str, kind: str):
     return items
 
 
+def git(repo_dir: Path, *args: str) -> str:
+    """Lance git sans shell ; renvoie '' en cas d'échec."""
+    try:
+        return subprocess.run(["git", "-C", str(repo_dir), *args], capture_output=True,
+                              text=True, encoding="utf-8", errors="replace",
+                              timeout=60, check=True).stdout
+    except (OSError, subprocess.SubprocessError):
+        return ""
+
+
+def collect_branches(root: Path, repo: str, dirs: list):
+    """Skills présents sur les autres branches distantes (origin/*) du dépôt, sans checkout."""
+    repo_dir = root / repo
+    if not (repo_dir / ".git").exists():
+        return []
+    current = git(repo_dir, "rev-parse", "--abbrev-ref", "HEAD").strip()
+    refs = [r for r in git(repo_dir, "for-each-ref", "--format=%(refname:short)",
+                           "refs/remotes/origin").split() if r != "origin/HEAD" and r != "origin"]
+    items = []
+    for ref in refs:
+        branch = ref.split("/", 1)[1]
+        if branch == current:
+            continue
+        listing = git(repo_dir, "ls-tree", "-r", "--name-only", ref, "--", *dirs)
+        for path in listing.splitlines():
+            if not any(re.fullmatch(re.escape(d) + r"/[^/]+/SKILL\.md", path) for d in dirs):
+                continue
+            text = git(repo_dir, "show", f"{ref}:{path}")
+            if not text:
+                continue
+            fm = parse_frontmatter(text)
+            name = (fm.get("name") or path.split("/")[-2]).strip()
+            desc = fm.get("description") or first_paragraph(text)
+            items.append({
+                "name": name, "kind": "skill", "repo": repo, "branch": branch,
+                "path": f"{repo}/{path} (branche {branch})",
+                "description": re.sub(r"\s+", " ", desc).strip()[:400],
+            })
+    return items
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=str(HERE.parent.parent))
@@ -192,6 +240,7 @@ def main():
 
     raw = []
     repos = []
+    branch_items = []
     for repo, rc in cfg["repos"].items():
         present = (root / repo).is_dir()
         found = []
@@ -200,11 +249,29 @@ def main():
         for rel in rc.get("agents", []):
             found += collect(root, repo, rel, "agent")
         raw += found
+        if cfg.get("scan_branches", True):
+            dirs = [p.split("/", 1)[1] for p in rc.get("skills", []) if "/" in p]
+            dirs += [d for d in cfg.get("branch_skill_dirs", []) if d not in dirs]
+            branch_items.extend(collect_branches(root, repo, dirs))
         repos.append({
             "name": repo, "goal": rc["goal"], "family": rc["family"], "present": present,
             "skills": sum(1 for i in found if i["kind"] == "skill"),
             "agents": sum(1 for i in found if i["kind"] == "agent"),
         })
+
+    # Un skill vu seulement sur une autre branche n'entre que s'il n'existe nulle part ailleurs
+    # (sinon une vieille branche ferait revenir des copies déjà supprimées).
+    known = {(i["kind"], i["name"]) for i in raw}
+    seen = set()
+    for it in branch_items:
+        key = (it["kind"], it["name"])
+        if key in known or key in seen:
+            continue
+        seen.add(key)
+        raw.append(it)
+        for r in repos:
+            if r["name"] == it["repo"]:
+                r["skills"] += 1
 
     # Fusion des doublons (même type + même nom) : une seule carte, avec la liste des dépôts.
     merged = {}
@@ -222,13 +289,16 @@ def main():
 
     items = []
     for key, it in merged.items():
-        cat, also = classify(it["name"], it["description"], it["kind"])
+        fams = {cfg["repos"][r]["family"] for r in it["repos"] if r in cfg["repos"]}
+        bias = next((FAMILY_BIAS[f] for f in fams if f in FAMILY_BIAS), "")
+        cat, also = classify(it["name"], it["description"], it["kind"], bias)
         prev = previous.get(key)
         first_seen = prev.get("first_seen", today) if prev else today
         items.append({
             "name": it["name"], "kind": it["kind"], "category": cat, "also": also,
             "repos": it["repos"], "path": it["paths"][0], "description": it["description"],
             "duplicate": len(it["repos"]) > 1, "first_seen": first_seen,
+            "branch": it.get("branch", ""),
             "new": prev is None and bool(previous),
         })
     items.sort(key=lambda i: (i["category"], i["kind"], i["name"].lower()))
@@ -261,7 +331,7 @@ def main():
         "category": labels[i["category"]], "also": ", ".join(labels[a] for a in i["also"]),
         "repos": ", ".join(i["repos"]), "duplicate": "oui" if i["duplicate"] else "non",
         "new": "oui" if i["new"] else "non", "first_seen": i["first_seen"],
-        "description": i["description"], "path": i["path"],
+        "description": i["description"], "path": i["path"], "branch": i.get("branch", ""),
     } for i in items]
     (out_path.parent / "items.json").write_text(
         json.dumps(flat, ensure_ascii=False), encoding="utf-8")

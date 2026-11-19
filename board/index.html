@@ -113,6 +113,7 @@
     <summary>Comment le classement fonctionne</summary>
     <div>
       <p>Chaque jour, une tâche planifiée relit les dossiers de skills et d'agents des 7 dépôts, puis range chaque élément dans la catégorie dont les mots-clés reviennent le plus dans son nom et sa description. Le nom compte trois fois plus que la description.</p>
+      <p>Les autres branches des dépôts sont lues aussi : un skill qui n'existe que sur une branche porte l'étiquette « autre branche ». Les skills des dépôts vidéo penchent vers la catégorie Vidéo.</p>
       <p>Un élément présent dans plusieurs dépôts n'apparaît qu'une fois, avec l'étiquette « double » et la liste des dépôts. Un élément absent de l'inventaire précédent porte l'étiquette « nouveau ».</p>
       <p>Les règles sont dans <code>board/build_board.py</code> et la liste des dossiers lus dans <code>board/config.json</code>, sur la branche <code>claude/vigilant-pasteur-zb4jzx</code> du dépôt <code>skills</code>.</p>
     </div>
@@ -302,10 +303,12 @@
         if (i.new === 'oui') tag('nouveau', 'new');
         if (i.type === 'Agent') tag('agent', 'agent');
         if (i.duplicate === 'oui') tag('double', 'dup');
+        if (i.branch) tag('autre branche', 'dup');
         tag(i.repos.split(', ')[0] + (i.repos.includes(',') ? ` +${i.repos.split(', ').length - 1}` : ''));
         const body = document.createElement('div'); body.className = 'sb-desc';
         const p = document.createElement('span'); p.textContent = i.description || 'Pas de description.'; body.append(p);
         const where = document.createElement('span'); where.textContent = `Dépôts : ${i.repos}`; body.append(where);
+        if (i.branch) { const br = document.createElement('span'); br.textContent = `Pas encore sur la branche principale : seulement sur ${i.branch}.`; body.append(br); }
         if (i.also) { const a = document.createElement('span'); a.textContent = `Touche aussi : ${i.also}`; body.append(a); }
         const path = document.createElement('code'); path.textContent = i.path; body.append(path);
         det.append(sum, body); li.append(det); ul.append(li);

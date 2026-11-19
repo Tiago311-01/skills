@@ -1,5 +1,10 @@
 {
   "_comment": "Où chercher les skills et agents. Ajoute un dépôt ici pour qu'il entre dans le board. Les chemins sont relatifs au dossier qui contient les dépôts.",
+  "scan_branches": true,
+  "_branch_comment": "Lit aussi les skills des autres branches distantes (origin/*), dans les dossiers 'skills' du dépôt et ceux-ci :",
+  "branch_skill_dirs": [
+    ".claude/skills"
+  ],
   "repos": {
     "ECC": {
       "goal": "Plugin Claude Code orienté développement : agents, commandes, hooks, règles",
