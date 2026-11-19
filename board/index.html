@@ -1,81 +1,155 @@
 <meta name="dash-one-writer">
 <style>
-  .sb { display: flex; flex-direction: column; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); }
-  .sb h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
-  .sb h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
-  .sb-lede { color: var(--color-fg-muted); margin: var(--cds-gap-sm) 0 0; max-width: 68ch; }
-  .sb-muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
-  .sb-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--cds-gap-md); }
-  .sb-tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-xs); }
-  .sb-tile-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .05em; }
-  .sb-tile-value { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 2.2rem; font-variant-numeric: tabular-nums; line-height: 1.1; }
-  .sb-section { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
-  .sb-tablewrap { overflow-x: auto; }
-  .sb table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-body); }
-  .sb th { text-align: left; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
-  .sb td { padding: var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
-  .sb td.num, .sb th.num { text-align: right; font-variant-numeric: tabular-nums; }
-  .sb-family td { background: var(--color-panel); font-weight: var(--cds-font-weight-medium); }
-  .sb-warn { color: var(--color-warn); }
-  .sb-controls { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
-  .sb-search { flex: 1 1 220px; min-width: 0; padding: 6px 10px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); font: inherit; }
-  .sb-chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--color-border-line); border-radius: 999px; font-size: var(--cds-font-size-caption); cursor: pointer; user-select: none; }
-  .sb-chip input { margin: 0; }
-  .sb-btn { padding: 4px 10px; border: 1px solid var(--color-border-line); border-radius: 999px; background: transparent; color: var(--color-fg); font: inherit; font-size: var(--cds-font-size-caption); cursor: pointer; }
-  .sb-btn:focus-visible, .sb-chip:focus-within, .sb-search:focus-visible { outline: 2px solid var(--cds-chart-reference); outline-offset: 1px; }
-  .sb-chart { position: relative; min-height: 380px; }
-  .sb-chart svg text { fill: var(--cds-text-secondary); font-size: var(--cds-font-size-caption); }
-  .sb-chart .bar { cursor: pointer; }
-  .sb-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: var(--cds-radius); padding: 6px 8px; font-size: var(--cds-font-size-caption); white-space: nowrap; }
-  .sb-legend { display: flex; align-items: center; gap: 6px; margin: 0; }
-  .sb-sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-left: 6px; }
-  .sb-board { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--cds-gap-md); align-items: start; min-height: 200px; }
-  .sb-col { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); display: flex; flex-direction: column; min-width: 0; }
-  .sb-col-head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--cds-gap-sm); padding: var(--cds-pad-md) var(--cds-pad-md) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); }
-  .sb-col-title { font-weight: var(--cds-font-weight-medium); }
-  .sb-col-count { font-variant-numeric: tabular-nums; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
-  .sb-col-list { list-style: none; margin: 0; padding: var(--cds-pad-xs); max-height: 420px; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
-  .sb-card summary { cursor: pointer; padding: 6px 8px; border-radius: calc(var(--cds-radius) - 2px); display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; list-style: none; }
-  .sb-card summary::-webkit-details-marker { display: none; }
-  .sb-card summary:hover { background: var(--color-bg); }
-  .sb-card[open] summary { background: var(--color-bg); }
-  .sb-name { font-weight: var(--cds-font-weight-medium); overflow-wrap: anywhere; }
-  .sb-tag { font-size: 11px; padding: 1px 6px; border-radius: 999px; border: 1px solid var(--color-border-line); color: var(--color-fg-muted); white-space: nowrap; }
-  .sb-tag.agent { color: var(--color-fg); border-color: var(--color-fg-muted); }
-  .sb-tag.dup { color: var(--color-warn); border-color: var(--color-warn); }
-  .sb-tag.new { color: var(--color-ok); border-color: var(--color-ok); }
-  .sb-desc { padding: 2px 8px 8px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); display: flex; flex-direction: column; gap: 4px; overflow-wrap: anywhere; }
-  .sb-empty { color: var(--color-fg-muted); padding: var(--cds-pad-md); }
-  .sb details.sb-help summary { cursor: pointer; color: var(--color-fg-muted); }
-  .sb details.sb-help div { max-width: 68ch; display: flex; flex-direction: column; gap: var(--cds-gap-sm); padding-top: var(--cds-gap-sm); }
-  .sb code { font-size: .92em; }
+  .hq { display: flex; flex-direction: column; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); --hq-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace; }
+  .hq h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .hq h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; text-wrap: balance; }
+  .hq h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .hq p { margin: 0; }
+  .hq-code { font-family: var(--hq-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--color-fg-muted); }
+  .hq-muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .hq-lede { color: var(--color-fg-muted); max-width: 70ch; }
+  .hq-panel { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-md); min-width: 0; }
+
+  /* En-tête et bande d'état */
+  .hq-head { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+  .hq-status { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); overflow: hidden; }
+  .hq-stat { padding: var(--cds-pad-md) var(--cds-pad-lg); display: flex; flex-direction: column; gap: 2px; border-right: 1px solid var(--color-border-line); background: var(--color-panel); }
+  .hq-stat:last-child { border-right: 0; }
+  .hq-stat-v { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 1.9rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .hq-stat.ok .hq-stat-v { color: var(--color-ok); }
+  .hq-stat.warn .hq-stat-v { color: var(--color-warn); }
+
+  /* Poste de commande */
+  .hq-command { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--cds-gap-md); align-items: start; }
+  @media (max-width: 760px) { .hq-command { grid-template-columns: minmax(0, 1fr); } }
+  .hq-ask { display: flex; gap: var(--cds-gap-sm); flex-wrap: wrap; }
+  .hq-input { flex: 1 1 240px; min-width: 0; padding: 8px 12px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); font: inherit; }
+  .hq-cmd { display: flex; align-items: center; gap: var(--cds-gap-sm); background: var(--color-bg); border: 1px dashed var(--color-border-line); border-radius: var(--cds-radius); padding: 6px 10px; font-family: var(--hq-mono); font-size: 12px; min-width: 0; }
+  .hq-cmd code { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+  .hq-route { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--cds-gap-md); min-height: 120px; }
+  .hq-route ol { margin: var(--cds-gap-xs) 0 0; padding-left: 1.3em; display: flex; flex-direction: column; gap: 6px; }
+  .hq-route li button { all: unset; cursor: pointer; font-weight: var(--cds-font-weight-medium); overflow-wrap: anywhere; }
+  .hq-route li button:hover { text-decoration: underline; }
+  .hq-route li button:focus-visible { outline: 2px solid var(--cds-chart-reference); outline-offset: 2px; }
+  .hq-route .hq-why { display: block; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .hq-agentcard { border-left: 3px solid var(--color-ok); padding-left: var(--cds-pad-md); display: flex; flex-direction: column; gap: 4px; }
+  .hq-alerts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .hq-alerts li { display: grid; grid-template-columns: 10px minmax(0, 1fr); gap: 8px; align-items: baseline; font-size: var(--cds-font-size-caption); }
+  .hq-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-fg-muted); transform: translateY(-1px); }
+  .hq-dot.ok { background: var(--color-ok); } .hq-dot.warn { background: var(--color-warn); } .hq-dot.bad { background: var(--color-bad); }
+  .hq-btn { padding: 6px 12px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); font: inherit; font-size: var(--cds-font-size-caption); cursor: pointer; }
+  .hq-btn.copied { border-color: var(--color-ok); color: var(--color-ok); }
+  .hq-btn:focus-visible, .hq-input:focus-visible { outline: 2px solid var(--cds-chart-reference); outline-offset: 1px; }
+
+  /* Filtres */
+  .hq-filters { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--color-bg); padding: var(--cds-pad-sm) 0; border-bottom: 1px solid var(--color-border-line); display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
+  .hq-chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--color-border-line); border-radius: 999px; font-size: var(--cds-font-size-caption); cursor: pointer; user-select: none; }
+  .hq-chip input { margin: 0; }
+
+  /* Divisions et cases */
+  .hq-divs { display: flex; flex-direction: column; gap: var(--cds-gap-xl); min-height: 300px; }
+  .hq-div { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+  .hq-div-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px var(--cds-gap-md); align-items: end; border-top: 2px solid var(--color-fg); padding-top: var(--cds-pad-sm); }
+  .hq-div-count { font-variant-numeric: tabular-nums; font-family: var(--hq-mono); font-size: 12px; color: var(--color-fg-muted); }
+  .hq-div-bar { grid-column: 1 / -1; display: flex; height: 6px; border-radius: 3px; overflow: hidden; gap: 2px; }
+  .hq-div-bar span { display: block; height: 100%; background: var(--cds-chart-muted); }
+  .hq-cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--cds-gap-md); align-items: start; }
+  .hq-case { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); display: flex; flex-direction: column; min-width: 0; }
+  .hq-case-head { display: flex; flex-direction: column; gap: 2px; padding: var(--cds-pad-md) var(--cds-pad-md) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); }
+  .hq-case-top { display: flex; justify-content: space-between; align-items: baseline; gap: var(--cds-gap-sm); }
+  .hq-case-n { font-family: var(--font-anthropic-serif); font-size: 1.4rem; line-height: 1; font-variant-numeric: tabular-nums; }
+  .hq-case-list { list-style: none; margin: 0; padding: var(--cds-pad-xs); max-height: 340px; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+  .hq-card summary { cursor: pointer; padding: 6px 8px; border-radius: calc(var(--cds-radius) - 2px); display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; list-style: none; }
+  .hq-card summary::-webkit-details-marker { display: none; }
+  .hq-card summary:hover, .hq-card[open] summary { background: var(--color-bg); }
+  .hq-card summary:focus-visible { outline: 2px solid var(--cds-chart-reference); }
+  .hq-name { font-weight: var(--cds-font-weight-medium); overflow-wrap: anywhere; }
+  .hq-tag { font-size: 11px; padding: 1px 6px; border-radius: 999px; border: 1px solid var(--color-border-line); color: var(--color-fg-muted); white-space: nowrap; }
+  .hq-tag.agent { color: var(--color-fg); border-color: var(--color-fg-muted); }
+  .hq-tag.dup, .hq-tag.branch { color: var(--color-warn); border-color: var(--color-warn); }
+  .hq-tag.new { color: var(--color-ok); border-color: var(--color-ok); }
+  .hq-desc { padding: 2px 8px 8px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); display: flex; flex-direction: column; gap: 4px; overflow-wrap: anywhere; }
+  .hq-desc code { font-size: 11px; }
+  .hq-empty { color: var(--color-fg-muted); padding: var(--cds-pad-md); }
+
+  /* Bases */
+  .hq-tablewrap { overflow-x: auto; }
+  .hq table { border-collapse: collapse; width: 100%; }
+  .hq th { text-align: left; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+  .hq td { padding: var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+  .hq td.num, .hq th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .hq-family td { font-family: var(--hq-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--color-fg-muted); padding-top: var(--cds-pad-md); }
+  .hq-warn { color: var(--color-warn); font-size: var(--cds-font-size-caption); }
+  .hq details.hq-help summary { cursor: pointer; color: var(--color-fg-muted); }
+  .hq details.hq-help div { max-width: 70ch; display: flex; flex-direction: column; gap: var(--cds-gap-sm); padding-top: var(--cds-gap-sm); }
 </style>
 
-<div class="sb">
-  <header id="top">
-    <h1>Board Skills &amp; Agents</h1>
-    <p class="sb-lede">
-      <b data-draw="total" data-source="stats" data-field="total" data-row="0">—</b> skills et agents de tes dépôts, rangés en
-      <b data-draw="cats" data-source="by_category" data-field="category">—</b> catégories selon leur but.
-      <span data-draw="dupline" data-source="stats" data-field="duplicates" data-row="0">—</span>
+<div class="hq">
+  <header class="hq-head" id="top">
+    <span class="hq-code">Quartier général</span>
+    <h1>QG Skills &amp; Agents</h1>
+    <p class="hq-lede">
+      <b data-draw="total" data-source="stats" data-field="total" data-row="0">—</b> skills et agents, répartis en
+      <b data-draw="ndivs" data-source="by_division" data-field="division">—</b> divisions et
+      <b data-draw="ncats" data-source="by_category" data-field="category">—</b> cases.
+      <span data-draw="lede-new" data-source="stats" data-field="new" data-row="0">—</span>
     </p>
-    <p class="sb-muted">Mis à jour chaque jour : les nouveaux skills et agents sont rangés automatiquement. La date du dernier inventaire est dans Sources.</p>
   </header>
 
-  <div class="sb-tiles" id="tiles">
-    <div class="sb-tile" id="tile-skills"><span class="sb-tile-label">Skills</span><span class="sb-tile-value" data-draw="n-skills" data-source="stats" data-field="skills" data-row="0">—</span></div>
-    <div class="sb-tile" id="tile-agents"><span class="sb-tile-label">Agents</span><span class="sb-tile-value" data-draw="n-agents" data-source="stats" data-field="agents" data-row="0">—</span></div>
-    <div class="sb-tile" id="tile-dups"><span class="sb-tile-label">En double</span><span class="sb-tile-value" data-draw="n-dups" data-source="stats" data-field="duplicates" data-row="0">—</span></div>
-    <div class="sb-tile" id="tile-new"><span class="sb-tile-label">Nouveaux</span><span class="sb-tile-value" data-draw="n-new" data-source="stats" data-field="new" data-row="0">—</span></div>
+  <div class="hq-status" id="status">
+    <div class="hq-stat"><span class="hq-code">Skills</span><span class="hq-stat-v" data-draw="n-skills" data-source="stats" data-field="skills" data-row="0">—</span></div>
+    <div class="hq-stat"><span class="hq-code">Agents</span><span class="hq-stat-v" data-draw="n-agents" data-source="stats" data-field="agents" data-row="0">—</span></div>
+    <div class="hq-stat ok"><span class="hq-code">Nouveaux (7 j)</span><span class="hq-stat-v" data-draw="n-new" data-source="stats" data-field="new" data-row="0">—</span></div>
+    <div class="hq-stat warn"><span class="hq-code">En double</span><span class="hq-stat-v" data-draw="n-dups" data-source="stats" data-field="duplicates" data-row="0">—</span></div>
+    <div class="hq-stat warn"><span class="hq-code">Hors branche principale</span><span class="hq-stat-v" data-draw="n-branch" data-source="stats" data-field="branch" data-row="0">—</span></div>
   </div>
 
-  <section class="sb-section" id="repos">
-    <h2>Les 7 dépôts, par famille</h2>
-    <div class="sb-tablewrap">
+  <section class="hq-command" id="command">
+    <div class="hq-panel" id="mission">
+      <span class="hq-code">Poste de commande</span>
+      <h2>Ordre de mission</h2>
+      <p class="hq-muted">Décris ce que tu veux faire : le QG propose les skills et les agents les plus proches. Pour qu'il choisisse vraiment et lance le travail, tape la commande dans Claude Code.</p>
+      <div class="hq-ask">
+        <input id="hq-ask" class="hq-input" type="search" placeholder="Ex. faire une vidéo de lancement avec sous-titres" aria-label="Ta demande">
+      </div>
+      <div class="hq-cmd"><code data-draw="cmd">/qg &lt;ta demande&gt;</code><button id="hq-copy" class="hq-btn" type="button">Copier</button></div>
+      <div class="hq-route" data-draw="route" data-source="items"></div>
+    </div>
+
+    <div class="hq-panel" id="intel">
+      <span class="hq-code">Chef d'orchestre</span>
+      <div class="hq-agentcard" data-draw="qg-card" data-source="items">—</div>
+      <span class="hq-code">Alertes</span>
+      <ul class="hq-alerts" data-draw="alerts" data-source="stats repos"></ul>
+    </div>
+  </section>
+
+  <section class="hq-section" id="cases">
+    <div class="hq-filters">
+      <input id="hq-q" class="hq-input" type="search" placeholder="Chercher dans les cases…" aria-label="Chercher dans les cases">
+      <select id="hq-kind" class="dash-select" aria-label="Type">
+        <option value="">Skills et agents</option>
+        <option value="Skill">Skills</option>
+        <option value="Agent">Agents</option>
+      </select>
+      <select id="hq-div" class="dash-select" aria-label="Division" data-draw="divselect" data-source="by_division"></select>
+      <label class="hq-chip"><input id="hq-new" type="checkbox"> Nouveaux</label>
+      <label class="hq-chip"><input id="hq-dup" type="checkbox"> En double</label>
+      <label class="hq-chip"><input id="hq-branch" type="checkbox"> Autre branche</label>
+      <button id="hq-reset" class="hq-btn" type="button">Tout afficher</button>
+      <span class="hq-muted" data-draw="shown">—</span>
+    </div>
+    <div class="hq-divs" data-draw="divisions" data-source="items by_category by_division"></div>
+  </section>
+
+  <section class="hq-panel" id="bases">
+    <span class="hq-code">Bases</span>
+    <h2>Les dépôts</h2>
+    <div class="hq-tablewrap">
       <table data-source="repos" data-row-key="name">
         <thead><tr>
           <th data-field="name">Dépôt</th>
-          <th data-field="goal">But</th>
+          <th data-field="goal">Mission</th>
           <th class="num" data-field="skills">Skills</th>
           <th class="num" data-field="agents">Agents</th>
         </tr></thead>
@@ -84,80 +158,69 @@
     </div>
   </section>
 
-  <section class="sb-section" id="categories">
-    <h2>Combien par catégorie</h2>
-    <p class="sb-muted">Clique sur une barre pour n'afficher que cette catégorie dans le board.</p>
-    <p class="sb-muted sb-legend"><span class="sb-sw" data-sw="0"></span> Skills <span class="sb-sw" data-sw="1"></span> Agents</p>
-    <div class="sb-chart" data-draw="chart" data-source="by_category"></div>
-  </section>
-
-  <section class="sb-section" id="board">
-    <h2>Le board</h2>
-    <div class="sb-controls">
-      <input id="sb-q" class="sb-search" type="search" placeholder="Chercher un skill, un agent, un mot…" aria-label="Chercher">
-      <select id="sb-kind" class="dash-select" aria-label="Type">
-        <option value="">Skills et agents</option>
-        <option value="Skill">Skills seulement</option>
-        <option value="Agent">Agents seulement</option>
-      </select>
-      <select id="sb-cat" class="dash-select" aria-label="Catégorie" data-draw="catselect" data-source="by_category"></select>
-      <label class="sb-chip"><input id="sb-new" type="checkbox"> Nouveaux</label>
-      <label class="sb-chip"><input id="sb-dup" type="checkbox"> En double</label>
-      <button id="sb-reset" class="sb-btn" type="button">Tout afficher</button>
-    </div>
-    <p class="sb-muted" data-draw="shown">—</p>
-    <div class="sb-board" data-draw="board" data-source="items"></div>
-  </section>
-
-  <details class="sb-help" id="help">
-    <summary>Comment le classement fonctionne</summary>
+  <details class="hq-help" id="help">
+    <summary>Comment le QG range et choisit</summary>
     <div>
-      <p>Chaque jour, une tâche planifiée relit les dossiers de skills et d'agents des 7 dépôts, puis range chaque élément dans la catégorie dont les mots-clés reviennent le plus dans son nom et sa description. Le nom compte trois fois plus que la description.</p>
-      <p>Les autres branches des dépôts sont lues aussi : un skill qui n'existe que sur une branche porte l'étiquette « autre branche ». Les skills des dépôts vidéo penchent vers la catégorie Vidéo.</p>
-      <p>Un élément présent dans plusieurs dépôts n'apparaît qu'une fois, avec l'étiquette « double » et la liste des dépôts. Un élément absent de l'inventaire précédent porte l'étiquette « nouveau ».</p>
-      <p>Les règles sont dans <code>board/build_board.py</code> et la liste des dossiers lus dans <code>board/config.json</code>, sur la branche <code>claude/vigilant-pasteur-zb4jzx</code> du dépôt <code>skills</code>.</p>
+      <p>Chaque matin, une tâche planifiée relit les dossiers de skills et d'agents des dépôts, sur toutes leurs branches, et range chaque élément dans la case dont les mots-clés reviennent le plus dans son nom et sa description. Les cases sont regroupées en divisions.</p>
+      <p>L'ordre de mission de cette page est un aperçu par mots-clés. Dans Claude Code, la commande <code>/qg</code> passe ta demande à l'agent <code>quartier-general</code>, qui lit le catalogue, choisit au plus trois skills et trois agents, écarte les doublons, puis lance le travail.</p>
+      <p>Le script, le catalogue et les règles sont dans le dossier <code>board/</code> du dépôt <code>skills</code> ; l'agent est dans <code>some_claude_skills/.claude/agents/quartier-general</code>.</p>
     </div>
   </details>
 </div>
 
 <script>
-  const CAT_ORDER = ['Sécurité & conformité', 'Revue de code & qualité', 'Tests & vérification', 'Langages & frameworks',
-    'Architecture, API & données backend', 'DevOps, infra & réseau', 'IA, LLM & agents', 'Vidéo, audio & médias',
-    'Design, UI & frontend', 'Données, visualisation & cartes', 'Recherche, docs & contenu', 'Business, carrière & ops',
-    'Vie perso & bien-être', 'Autres'];
-  window.SB_CAT_ORDER = CAT_ORDER;
-  window.SB_STATE = window.SB_STATE || { q: '', kind: '', cat: '', onlyNew: false, onlyDup: false };
+  window.HQ_DIVISIONS = [
+    { id: 'eng', label: 'Ingénierie logicielle', code: 'Div. 1', cats: ['Revue de code & qualité', 'Tests & vérification', 'Langages & frameworks', 'Architecture, API & données backend', 'DevOps, infra & réseau', 'Sécurité & conformité'] },
+    { id: 'ai', label: 'IA & agents', code: 'Div. 2', cats: ['IA, LLM & agents'] },
+    { id: 'create', label: 'Création & médias', code: 'Div. 3', cats: ['Vidéo, audio & médias', 'Design, UI & frontend'] },
+    { id: 'intel', label: 'Renseignement & savoir', code: 'Div. 4', cats: ['Données, visualisation & cartes', 'Recherche, docs & contenu'] },
+    { id: 'civil', label: 'Business & vie perso', code: 'Div. 5', cats: ['Business, carrière & ops', 'Vie perso & bien-être', 'Autres'] },
+  ];
+  window.HQ_STATE = window.HQ_STATE || { q: '', kind: '', div: '', onlyNew: false, onlyDup: false, onlyBranch: false, ask: '' };
 
   dash.calc('stats', {
     title: 'Totaux',
-    description: 'Nombre de skills, d’agents, d’éléments en double et de nouveaux dans l’inventaire.',
+    description: 'Nombre de skills, d’agents, de nouveaux (7 jours), d’éléments en double et d’éléments vus seulement sur une autre branche.',
     inputs: ['items'],
     fn: (items) => [{
       total: items.length,
       skills: items.filter((i) => i.type === 'Skill').length,
       agents: items.filter((i) => i.type === 'Agent').length,
-      duplicates: items.filter((i) => i.duplicate === 'oui').length,
       new: items.filter((i) => i.new === 'oui').length,
+      duplicates: items.filter((i) => i.duplicate === 'oui').length,
+      branch: items.filter((i) => i.branch).length,
     }],
   });
 
   dash.calc('by_category', {
-    title: 'Éléments par catégorie',
-    description: 'Nombre de skills et d’agents rangés dans chaque catégorie.',
+    title: 'Éléments par case',
+    description: 'Nombre de skills et d’agents rangés dans chaque case.',
     inputs: ['items'],
     fn: (items) => {
-      const order = ['Sécurité & conformité', 'Revue de code & qualité', 'Tests & vérification', 'Langages & frameworks',
-        'Architecture, API & données backend', 'DevOps, infra & réseau', 'IA, LLM & agents', 'Vidéo, audio & médias',
-        'Design, UI & frontend', 'Données, visualisation & cartes', 'Recherche, docs & contenu', 'Business, carrière & ops',
-        'Vie perso & bien-être', 'Autres'];
       const m = new Map();
       for (const i of items) {
-        const r = m.get(i.category) || { category: i.category, skills: 0, agents: 0, count: 0 };
+        const r = m.get(i.category) || { category: i.category, count: 0, skills: 0, agents: 0 };
         r.count += 1;
         if (i.type === 'Agent') r.agents += 1; else r.skills += 1;
         m.set(i.category, r);
       }
-      return [...m.values()].sort((a, b) => b.count - a.count || order.indexOf(a.category) - order.indexOf(b.category));
+      return [...m.values()].sort((a, b) => b.count - a.count);
+    },
+  });
+
+  dash.calc('by_division', {
+    title: 'Éléments par division',
+    description: 'Les cases regroupées en cinq divisions : ingénierie, IA, création, renseignement, business et vie perso.',
+    inputs: ['items'],
+    fn: (items) => {
+      const divisions = [
+        ['Ingénierie logicielle', ['Revue de code & qualité', 'Tests & vérification', 'Langages & frameworks', 'Architecture, API & données backend', 'DevOps, infra & réseau', 'Sécurité & conformité']],
+        ['IA & agents', ['IA, LLM & agents']],
+        ['Création & médias', ['Vidéo, audio & médias', 'Design, UI & frontend']],
+        ['Renseignement & savoir', ['Données, visualisation & cartes', 'Recherche, docs & contenu']],
+        ['Business & vie perso', ['Business, carrière & ops', 'Vie perso & bien-être', 'Autres']],
+      ];
+      return divisions.map(([division, cats]) => ({ division, count: items.filter((i) => cats.includes(i.category)).length }));
     },
   });
 </script>
@@ -165,176 +228,269 @@
 <script>
   const fmt = (n) => new Intl.NumberFormat('fr-FR').format(n);
   const statRow = () => { const s = dash.data('stats'); return s.status === 'ok' && s.data && s.data[0] ? s.data[0] : null; };
-  const unskel = (el) => el.classList.remove('dash-skeleton');
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const divOf = (cat) => window.HQ_DIVISIONS.find((d) => d.cats.includes(cat)) || window.HQ_DIVISIONS[window.HQ_DIVISIONS.length - 1];
 
-  for (const [name, field] of [['total', 'total'], ['n-skills', 'skills'], ['n-agents', 'agents'], ['n-dups', 'duplicates'], ['n-new', 'new']]) {
-    dash.draw(name, (el) => { const r = statRow(); el.textContent = r ? fmt(r[field]) : '—'; });
+  for (const [name, field] of [['total', 'total'], ['n-skills', 'skills'], ['n-agents', 'agents'], ['n-new', 'new'], ['n-dups', 'duplicates'], ['n-branch', 'branch']]) {
+    dash.draw(name, (e) => { const r = statRow(); e.textContent = r ? fmt(r[field]) : '—'; });
   }
-  dash.draw('cats', (el) => { const d = dash.data('by_category'); el.textContent = d.status === 'ok' ? fmt(d.data.length) : '—'; });
-  dash.draw('dupline', (el) => {
+  dash.draw('ndivs', (e) => { const d = dash.data('by_division'); e.textContent = d.status === 'ok' ? fmt(d.data.length) : '—'; });
+  dash.draw('ncats', (e) => { const d = dash.data('by_category'); e.textContent = d.status === 'ok' ? fmt(d.data.length) : '—'; });
+  dash.draw('lede-new', (e) => {
     const r = statRow();
-    if (!r) { el.textContent = '—'; return; }
-    el.textContent = r.duplicates > 0
-      ? `${fmt(r.duplicates)} apparaissent dans plusieurs dépôts : ce sont des copies à fusionner.`
-      : 'Aucun élément n’est en double.';
+    if (!r) { e.textContent = '—'; return; }
+    e.textContent = r.new > 0 ? `${fmt(r.new)} sont arrivés ces 7 derniers jours.` : 'Rien de nouveau ces 7 derniers jours.';
   });
 
-  dash.draw('repos', (tbody) => {
-    const d = dash.data('repos');
-    tbody.replaceChildren();
+  /* ---------- Ordre de mission (aperçu par mots-clés) ---------- */
+  const SYN = {
+    video: ['video', 'motion', 'hyperframes', 'caption'], vidéo: ['video', 'motion', 'hyperframes', 'caption'],
+    'sous-titres': ['caption', 'subtitle'], soustitres: ['caption', 'subtitle'], montage: ['video', 'editing'],
+    revue: ['review'], relecture: ['review'], code: ['code'], bug: ['bug', 'debug', 'fix'], erreur: ['error', 'debug', 'build'],
+    test: ['test', 'tdd'], tests: ['test', 'tdd'], sécurité: ['security'], securite: ['security'], audit: ['audit'],
+    base: ['database'], données: ['data', 'database'], donnees: ['data', 'database'], graphique: ['chart', 'viz', 'dashboard'],
+    tableau: ['dashboard', 'table'], design: ['design', 'ui'], interface: ['ui', 'interface', 'frontend'], site: ['web', 'website'],
+    recherche: ['research', 'search'], veille: ['trend', 'scout', 'research'], article: ['article', 'writing'], écrire: ['writing', 'writer'],
+    rédiger: ['writing', 'writer'], cv: ['cv', 'resume'], entretien: ['interview'], emploi: ['job', 'career'], carrière: ['career'],
+    déployer: ['deploy', 'deployment'], déploiement: ['deploy', 'deployment'], réseau: ['network'], agent: ['agent'], agents: ['agent'],
+    skill: ['skill'], skills: ['skill'], prompt: ['prompt'], api: ['api'], mobile: ['mobile', 'ios', 'android'], musique: ['music', 'audio'],
+    voix: ['voice', 'speech', 'audio'], image: ['image', 'photo'], photo: ['photo', 'image'], carte: ['map', 'geospatial'],
+    marketing: ['marketing', 'seo', 'content'], seo: ['seo'], planifier: ['plan', 'planner'], plan: ['plan', 'planner'], refactor: ['refactor'],
+    performance: ['performance', 'optimiz'], lent: ['performance', 'optimiz'], docker: ['docker'], pdf: ['pdf'], email: ['email'],
+  };
+  const STOP = new Set(['les', 'des', 'une', 'pour', 'avec', 'dans', 'sur', 'mon', 'mes', 'ma', 'faire', 'fais', 'moi', 'qui', 'que', 'est', 'the', 'and', 'for', 'veux', 'aide', 'aider', 'comment', 'nouveau', 'nouvelle', 'un', 'de', 'du', 'la', 'le', 'et', 'en', 'à']);
+  const terms = (ask) => {
+    const out = new Set();
+    for (const w of ask.toLowerCase().split(/[^a-zà-ÿ0-9+#-]+/).filter((x) => x.length >= 2 && !STOP.has(x))) {
+      out.add(w);
+      for (const s of SYN[w] || []) out.add(s);
+      if (w.length > 4 && w.endsWith('s')) out.add(w.slice(0, -1));
+    }
+    return [...out];
+  };
+  const score = (i, ts) => {
+    const n = i.name.toLowerCase(); const d = (i.description || '').toLowerCase(); const c = i.category.toLowerCase();
+    let s = 0;
+    for (const t of ts) { if (n.includes(t)) s += 3; if (d.includes(t)) s += 1; if (c.includes(t)) s += 1; }
+    if (s && i.branch) s -= 1;
+    return s;
+  };
+  window.HQ_ROUTE = (items, ask) => {
+    const ts = terms(ask);
+    if (!ts.length) return { skills: [], agents: [] };
+    const ranked = items.map((i) => ({ i, s: score(i, ts) })).filter((x) => x.s > 1).sort((a, b) => b.s - a.s || a.i.name.localeCompare(b.i.name));
+    const seen = new Set();
+    const pick = (type, n) => ranked.filter((x) => x.i.type === type && !seen.has(x.i.name) && seen.add(x.i.name)).slice(0, n);
+    return { skills: pick('Skill', 5), agents: pick('Agent', 3) };
+  };
+
+  dash.draw('cmd', (e) => { const a = window.HQ_STATE.ask.trim(); e.textContent = `/qg ${a || '<ta demande>'}`; });
+
+  dash.draw('route', (box) => {
+    box.replaceChildren();
+    const d = dash.data('items');
     if (d.status !== 'ok') return;
-    const fams = d3.groups(d.data, (r) => r.family);
-    for (const [fam, rows] of fams) {
-      const tr = document.createElement('tr'); tr.className = 'sb-family';
-      const td = document.createElement('td'); td.colSpan = 4; td.textContent = fam; tr.append(td); tbody.append(tr);
-      for (const r of rows) {
-        const row = document.createElement('tr'); row.dataset.key = encodeURIComponent(r.name);
-        const c1 = document.createElement('td'); c1.textContent = r.name;
-        const c2 = document.createElement('td'); c2.textContent = r.goal;
-        if (r.name === 'magic-mcp') { const w = document.createElement('div'); w.className = 'sb-warn sb-muted'; w.textContent = 'À archiver : remplacé par 21st MCP.'; c2.append(w); }
-        const c3 = document.createElement('td'); c3.className = 'num'; c3.textContent = fmt(r.skills);
-        const c4 = document.createElement('td'); c4.className = 'num'; c4.textContent = fmt(r.agents);
-        row.append(c1, c2, c3, c4); tbody.append(row);
+    const ask = window.HQ_STATE.ask.trim();
+    if (!ask) {
+      box.append(el('p', 'hq-muted', 'Les skills et agents proposés s’affichent ici dès que tu écris ta demande.'));
+      return;
+    }
+    const r = window.HQ_ROUTE(d.data, ask);
+    if (!r.skills.length && !r.agents.length) {
+      box.append(el('p', 'hq-muted', 'Aucun skill ne correspond à ces mots. Essaie d’autres mots, ou tape la commande /qg pour que l’agent cherche plus finement.'));
+      return;
+    }
+    for (const [title, list] of [['Skills à charger', r.skills], ['Agents à lancer', r.agents]]) {
+      if (!list.length) continue;
+      const col = el('div');
+      col.append(el('h3', null, title));
+      const ol = el('ol');
+      for (const { i } of list) {
+        const li = el('li');
+        const b = el('button', null, i.name); b.type = 'button';
+        b.addEventListener('click', () => {
+          window.HQ_STATE.q = i.name; window.HQ_STATE.div = ''; window.HQ_STATE.kind = '';
+          const q = document.getElementById('hq-q'); if (q) q.value = i.name;
+          dash.draw('divisions'); dash.draw('shown'); dash.draw('divselect');
+          const c = document.getElementById('cases'); if (c) c.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        li.append(b, el('span', 'hq-why', `${i.category} · ${i.repos}${i.branch ? ' · autre branche' : ''}`));
+        ol.append(li);
       }
+      col.append(ol); box.append(col);
     }
   });
 
-  dash.draw('chart', {
-    mount: (el) => {
-      el.replaceChildren();
-      const svg = d3.select(el).append('svg').attr('role', 'img').attr('aria-label', 'Nombre de skills et d’agents par catégorie').attr('width', '100%');
-      const tip = d3.select(el).append('div').attr('class', 'sb-tip').style('opacity', 0);
-      return { svg, tip };
-    },
-    update: (el, { svg, tip }) => {
-      const d = dash.data('by_category');
-      if (d.status !== 'ok') { svg.selectAll('*').remove(); if (d.status === 'error') svg.append('text').attr('x', 0).attr('y', 20).text('Échec du chargement'); return; }
-      const rows = d.data;
-      const W = Math.max(280, el.clientWidth);
-      const barH = 22, gap = 6, top = 4;
-      const H = top + rows.length * (barH + gap);
-      svg.attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
-      svg.selectAll('*').remove();
-      const labels = svg.append('g');
-      const lab = labels.selectAll('text').data(rows).join('text').text((r) => r.category).attr('y', (r, i) => top + i * (barH + gap) + barH / 2).attr('dy', '0.35em');
-      let labW = 0; lab.each(function () { labW = Math.max(labW, this.getComputedTextLength()); });
-      labW = Math.min(labW, W * 0.45);
-      const left = labW + 10;
-      const valW = 40;
-      const x = d3.scaleLinear().domain([0, d3.max(rows, (r) => r.count) || 1]).range([0, Math.max(40, W - left - valW)]);
-      const sel = window.SB_STATE.cat;
-      const g = svg.append('g').attr('transform', `translate(${left},0)`);
-      const bars = g.selectAll('g').data(rows).join('g').attr('class', 'bar').attr('transform', (r, i) => `translate(0,${top + i * (barH + gap)})`);
-      bars.append('rect').attr('height', barH).attr('rx', 3).attr('width', (r) => Math.max(1, x(r.skills)))
-        .style('fill', dash.colors[0]).style('opacity', (r) => (sel && sel !== r.category ? 0.35 : 1));
-      bars.append('rect').attr('height', barH).attr('rx', 3).attr('x', (r) => x(r.skills)).attr('width', (r) => x(r.agents))
-        .style('fill', dash.colors[1]).style('opacity', (r) => (sel && sel !== r.category ? 0.35 : 1));
-      bars.append('text').attr('x', (r) => x(r.count) + 6).attr('y', barH / 2).attr('dy', '0.35em').text((r) => fmt(r.count))
-        .style('font-variant-numeric', 'tabular-nums');
-      bars.append('rect').attr('width', W - left).attr('height', barH).style('fill', 'transparent')
-        .on('mousemove', (ev, r) => {
-          const [mx, my] = d3.pointer(ev, el);
-          tip.style('opacity', 1).text(`${r.category} : ${fmt(r.skills)} skills, ${fmt(r.agents)} agents`)
-            .style('left', `${Math.min(mx + 12, el.clientWidth - 220)}px`).style('top', `${my + 12}px`);
-        })
-        .on('mouseleave', () => tip.style('opacity', 0))
-        .on('click', (ev, r) => {
-          window.SB_STATE.cat = window.SB_STATE.cat === r.category ? '' : r.category;
-          dash.draw('catselect'); dash.draw('board'); dash.draw('shown'); dash.draw('chart');
-          const b = document.getElementById('board'); if (b) b.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      labels.selectAll('text').attr('x', labW).attr('text-anchor', 'end');
-    },
+  dash.draw('qg-card', (box) => {
+    box.replaceChildren();
+    const d = dash.data('items');
+    if (d.status !== 'ok') { box.textContent = '—'; return; }
+    const agent = d.data.find((i) => i.name === 'quartier-general' && i.type === 'Agent');
+    const skill = d.data.find((i) => i.name === 'qg' && i.type === 'Skill');
+    if (!agent) { box.append(el('p', 'hq-muted', 'L’agent quartier-general n’est pas encore dans l’inventaire.')); return; }
+    box.append(el('h3', null, 'quartier-general'));
+    box.append(el('p', 'hq-muted', 'Lit le catalogue, choisit au plus 3 skills et 3 agents par demande, écarte les doublons et donne l’ordre de passage.'));
+    box.append(el('p', 'hq-muted', `Commande : ${skill ? '/qg <demande>' : 'appeler l’agent quartier-general'} · ${agent.repos}`));
   });
 
-  dash.draw('catselect', (sel) => {
-    const d = dash.data('by_category');
-    const opts = [new Option('Toutes les catégories', '')];
-    if (d.status === 'ok') for (const r of d.data) opts.push(new Option(`${r.category} (${r.count})`, r.category));
-    sel.replaceChildren(...opts);
-    sel.value = window.SB_STATE.cat;
+  dash.draw('alerts', (ul) => {
+    ul.replaceChildren();
+    const r = statRow(); const rp = dash.data('repos'); const it = dash.data('items');
+    if (!r || it.status !== 'ok') return;
+    const add = (lvl, text) => { const li = el('li'); li.append(el('span', `hq-dot ${lvl}`), el('span', null, text)); ul.append(li); };
+    if (r.new) {
+      const names = it.data.filter((i) => i.new === 'oui').map((i) => i.name);
+      add('ok', `${fmt(r.new)} nouveaux : ${names.slice(0, 4).join(', ')}${names.length > 4 ? '…' : ''}`);
+    }
+    if (r.branch) add('warn', `${fmt(r.branch)} skills ne sont que sur une branche secondaire : à fusionner pour qu’ils soient installés partout.`);
+    if (r.duplicates) {
+      const names = it.data.filter((i) => i.duplicate === 'oui').map((i) => i.name);
+      add('warn', `${fmt(r.duplicates)} noms existent en deux versions : ${names.join(', ')}.`);
+    }
+    if (rp.status === 'ok') for (const b of rp.data.filter((x) => /remplacé/i.test(x.goal))) add('bad', `${b.name} est remplacé : à archiver.`);
+    for (const b of (rp.status === 'ok' ? rp.data : []).filter((x) => !x.present)) add('bad', `${b.name} est introuvable lors du dernier inventaire.`);
+    if (!ul.children.length) add('ok', 'Rien à signaler.');
   });
 
+  /* ---------- Divisions et cases ---------- */
   const matches = (i) => {
-    const s = window.SB_STATE;
+    const s = window.HQ_STATE;
     if (s.kind && i.type !== s.kind) return false;
-    if (s.cat && i.category !== s.cat) return false;
+    if (s.div && divOf(i.category).id !== s.div) return false;
     if (s.onlyNew && i.new !== 'oui') return false;
     if (s.onlyDup && i.duplicate !== 'oui') return false;
+    if (s.onlyBranch && !i.branch) return false;
     if (s.q) {
       const hay = `${i.name} ${i.description} ${i.repos} ${i.category}`.toLowerCase();
       if (!s.q.toLowerCase().split(/\s+/).filter(Boolean).every((w) => hay.includes(w))) return false;
     }
     return true;
   };
-  window.SB_MATCHES = matches;
 
-  dash.draw('shown', (el) => {
-    const d = dash.data('items');
-    if (d.status !== 'ok') { el.textContent = '—'; return; }
-    const n = d.data.filter(matches).length;
-    el.textContent = n === d.data.length ? `${fmt(n)} éléments affichés.` : `${fmt(n)} sur ${fmt(d.data.length)} éléments affichés.`;
+  dash.draw('divselect', (sel) => {
+    sel.replaceChildren(new Option('Toutes les divisions', ''), ...window.HQ_DIVISIONS.map((d) => new Option(`${d.code} · ${d.label}`, d.id)));
+    sel.value = window.HQ_STATE.div;
   });
 
-  dash.draw('board', (el) => {
+  dash.draw('shown', (e) => {
     const d = dash.data('items');
-    el.replaceChildren();
-    if (d.status !== 'ok') { if (d.status === 'error') { const p = document.createElement('p'); p.className = 'sb-empty'; p.textContent = 'Échec du chargement de l’inventaire.'; el.append(p); } return; }
-    const order = window.SB_CAT_ORDER;
+    if (d.status !== 'ok') { e.textContent = '—'; return; }
+    const n = d.data.filter(matches).length;
+    e.textContent = n === d.data.length ? `${fmt(n)} affichés` : `${fmt(n)} sur ${fmt(d.data.length)} affichés`;
+  });
+
+  const card = (i) => {
+    const li = el('li');
+    const det = el('details', 'hq-card');
+    const sum = el('summary');
+    sum.append(el('span', 'hq-name', i.name));
+    if (i.new === 'oui') sum.append(el('span', 'hq-tag new', 'nouveau'));
+    if (i.type === 'Agent') sum.append(el('span', 'hq-tag agent', 'agent'));
+    if (i.duplicate === 'oui') sum.append(el('span', 'hq-tag dup', 'double'));
+    if (i.branch) sum.append(el('span', 'hq-tag branch', 'autre branche'));
+    const repos = i.repos.split(', ');
+    sum.append(el('span', 'hq-tag', repos[0] + (repos.length > 1 ? ` +${repos.length - 1}` : '')));
+    const body = el('div', 'hq-desc');
+    body.append(el('span', null, i.description || 'Pas de description.'));
+    body.append(el('span', null, `Dépôts : ${i.repos}`));
+    if (i.branch) body.append(el('span', null, `Pas encore sur la branche principale : seulement sur ${i.branch}.`));
+    if (i.also) body.append(el('span', null, `Touche aussi : ${i.also}`));
+    body.append(el('code', null, i.path));
+    det.append(sum, body); li.append(det);
+    return li;
+  };
+
+  dash.draw('divisions', (box) => {
+    box.replaceChildren();
+    const d = dash.data('items'); const bc = dash.data('by_category'); const bd = dash.data('by_division');
+    if (d.status !== 'ok') { if (d.status === 'error') box.append(el('p', 'hq-empty', 'Échec du chargement de l’inventaire.')); return; }
+    const catCount = new Map((bc.status === 'ok' ? bc.data : []).map((r) => [r.category, r]));
+    const divCount = new Map((bd.status === 'ok' ? bd.data : []).map((r) => [r.division, r.count]));
     const rows = d.data.filter(matches);
-    if (!rows.length) { const p = document.createElement('p'); p.className = 'sb-empty'; p.textContent = 'Rien ne correspond. Essaie un autre mot ou « Tout afficher ».'; el.append(p); return; }
-    const groups = d3.groups(rows, (r) => r.category).sort((a, b) => b[1].length - a[1].length || order.indexOf(a[0]) - order.indexOf(b[0]));
-    for (const [cat, list] of groups) {
-      const col = document.createElement('div'); col.className = 'sb-col';
-      const head = document.createElement('div'); head.className = 'sb-col-head';
-      const t = document.createElement('span'); t.className = 'sb-col-title'; t.textContent = cat;
-      const c = document.createElement('span'); c.className = 'sb-col-count';
-      const na = list.filter((i) => i.type === 'Agent').length;
-      c.textContent = na ? `${fmt(list.length - na)} skills · ${fmt(na)} agents` : `${fmt(list.length)} skills`;
-      head.append(t, c);
-      const ul = document.createElement('ul'); ul.className = 'sb-col-list';
-      list.sort((a, b) => (b.new === 'oui') - (a.new === 'oui') || (a.type === 'Agent' ? -1 : 0) - (b.type === 'Agent' ? -1 : 0) || a.name.localeCompare(b.name));
-      for (const i of list) {
-        const li = document.createElement('li');
-        const det = document.createElement('details'); det.className = 'sb-card';
-        const sum = document.createElement('summary');
-        const nm = document.createElement('span'); nm.className = 'sb-name'; nm.textContent = i.name; sum.append(nm);
-        const tag = (txt, cls) => { const s = document.createElement('span'); s.className = `sb-tag ${cls || ''}`; s.textContent = txt; sum.append(s); };
-        if (i.new === 'oui') tag('nouveau', 'new');
-        if (i.type === 'Agent') tag('agent', 'agent');
-        if (i.duplicate === 'oui') tag('double', 'dup');
-        if (i.branch) tag('autre branche', 'dup');
-        tag(i.repos.split(', ')[0] + (i.repos.includes(',') ? ` +${i.repos.split(', ').length - 1}` : ''));
-        const body = document.createElement('div'); body.className = 'sb-desc';
-        const p = document.createElement('span'); p.textContent = i.description || 'Pas de description.'; body.append(p);
-        const where = document.createElement('span'); where.textContent = `Dépôts : ${i.repos}`; body.append(where);
-        if (i.branch) { const br = document.createElement('span'); br.textContent = `Pas encore sur la branche principale : seulement sur ${i.branch}.`; body.append(br); }
-        if (i.also) { const a = document.createElement('span'); a.textContent = `Touche aussi : ${i.also}`; body.append(a); }
-        const path = document.createElement('code'); path.textContent = i.path; body.append(path);
-        det.append(sum, body); li.append(det); ul.append(li);
+    const filtered = rows.length !== d.data.length;
+    if (!rows.length) { box.append(el('p', 'hq-empty', 'Rien ne correspond. Essaie un autre mot ou « Tout afficher ».')); return; }
+    for (const div of window.HQ_DIVISIONS) {
+      const inDiv = rows.filter((i) => div.cats.includes(i.category));
+      if (!inDiv.length) continue;
+      const sec = el('section', 'hq-div'); sec.id = `div-${div.id}`;
+      const head = el('div', 'hq-div-head');
+      const left = el('div');
+      left.append(el('span', 'hq-code', div.code), el('h2', null, div.label));
+      const cnt = el('span', 'hq-div-count');
+      const total = el('span', null, divCount.has(div.label) ? fmt(divCount.get(div.label)) : '—');
+      total.dataset.source = 'by_division'; total.dataset.field = 'count'; total.dataset.where = `division=${encodeURIComponent(div.label)}`;
+      cnt.append(total, document.createTextNode(filtered ? ` éléments · ${fmt(inDiv.length)} affichés` : ' éléments'));
+      const bar = el('div', 'hq-div-bar');
+      for (const cat of div.cats) {
+        const n = (catCount.get(cat) || {}).count || 0;
+        if (!n) continue;
+        const s = el('span'); s.style.flex = String(n); s.title = `${cat} : ${n}`; bar.append(s);
       }
-      col.append(head, ul); el.append(col);
+      head.append(left, cnt, bar);
+      const grid = el('div', 'hq-cases');
+      for (const cat of div.cats) {
+        const list = inDiv.filter((i) => i.category === cat);
+        if (!list.length) continue;
+        const c = el('div', 'hq-case'); c.id = `case-${div.id}-${div.cats.indexOf(cat)}`;
+        const ch = el('div', 'hq-case-head');
+        const top = el('div', 'hq-case-top');
+        top.append(el('h3', null, cat));
+        const n = el('span', 'hq-case-n', fmt((catCount.get(cat) || {}).count ?? list.length));
+        n.dataset.source = 'by_category'; n.dataset.field = 'count'; n.dataset.where = `category=${encodeURIComponent(cat)}`;
+        top.append(n);
+        const cc = catCount.get(cat);
+        ch.append(top, el('span', 'hq-muted', cc ? `${fmt(cc.skills)} skills · ${fmt(cc.agents)} agents${filtered ? ` · ${fmt(list.length)} affichés` : ''}` : ''));
+        const ul = el('ul', 'hq-case-list');
+        list.sort((a, b) => (b.new === 'oui') - (a.new === 'oui') || (b.type === 'Agent') - (a.type === 'Agent') || a.name.localeCompare(b.name));
+        for (const i of list) ul.append(card(i));
+        c.append(ch, ul); grid.append(c);
+      }
+      sec.append(head, grid); box.append(sec);
     }
   });
 
-  for (const sw of document.querySelectorAll('.sb-sw')) sw.style.background = dash.colors[Number(sw.dataset.sw)] || dash.colors[0];
+  /* ---------- Bases ---------- */
+  dash.draw('repos', (tbody) => {
+    tbody.replaceChildren();
+    const d = dash.data('repos');
+    if (d.status !== 'ok') return;
+    for (const [fam, rows] of d3.groups(d.data, (r) => r.family)) {
+      const tr = el('tr', 'hq-family'); const td = el('td', null, fam); td.colSpan = 4; tr.append(td); tbody.append(tr);
+      for (const r of rows) {
+        const row = el('tr'); row.dataset.key = encodeURIComponent(r.name);
+        const goal = el('td', null, r.goal);
+        if (/remplacé/i.test(r.goal)) goal.append(el('div', 'hq-warn', 'À archiver.'));
+        const s = el('td', 'num', fmt(r.skills)); const a = el('td', 'num', fmt(r.agents));
+        row.append(el('td', null, r.name), goal, s, a); tbody.append(row);
+      }
+    }
+  });
 
-  // Contrôles : les écouteurs ne font que mettre à jour l'état et relancer les dessins.
-  const redraw = () => { dash.draw('board'); dash.draw('shown'); dash.draw('chart'); };
-  const q = document.getElementById('sb-q');
-  if (q) q.addEventListener('input', () => { window.SB_STATE.q = q.value.trim(); redraw(); });
-  const kind = document.getElementById('sb-kind');
-  if (kind) kind.addEventListener('change', () => { window.SB_STATE.kind = kind.value; redraw(); });
-  for (const sel of document.querySelectorAll('#sb-cat')) sel.addEventListener('change', () => { window.SB_STATE.cat = sel.value; redraw(); });
-  const nw = document.getElementById('sb-new');
-  if (nw) nw.addEventListener('change', () => { window.SB_STATE.onlyNew = nw.checked; redraw(); });
-  const dp = document.getElementById('sb-dup');
-  if (dp) dp.addEventListener('change', () => { window.SB_STATE.onlyDup = dp.checked; redraw(); });
-  const reset = document.getElementById('sb-reset');
+  /* ---------- Contrôles : les écouteurs mettent à jour l'état et relancent les dessins ---------- */
+  const redraw = () => { dash.draw('divisions'); dash.draw('shown'); };
+  const byId = (id) => document.getElementById(id);
+  const ask = byId('hq-ask');
+  if (ask) ask.addEventListener('input', () => { window.HQ_STATE.ask = ask.value; dash.draw('route'); dash.draw('cmd'); });
+  const copy = byId('hq-copy');
+  if (copy) copy.addEventListener('click', () => {
+    const text = `/qg ${window.HQ_STATE.ask.trim() || '<ta demande>'}`;
+    const done = () => { copy.setAttribute('aria-label', 'Copié'); copy.classList.add('copied'); };
+    try { navigator.clipboard.writeText(text).then(done, () => {}); } catch (e) { /* le texte reste sélectionnable */ }
+  });
+  const q = byId('hq-q');
+  if (q) q.addEventListener('input', () => { window.HQ_STATE.q = q.value.trim(); redraw(); });
+  const kind = byId('hq-kind');
+  if (kind) kind.addEventListener('change', () => { window.HQ_STATE.kind = kind.value; redraw(); });
+  const dv = byId('hq-div');
+  if (dv) dv.addEventListener('change', () => { window.HQ_STATE.div = dv.value; redraw(); });
+  for (const [id, key] of [['hq-new', 'onlyNew'], ['hq-dup', 'onlyDup'], ['hq-branch', 'onlyBranch']]) {
+    const c = byId(id); if (c) c.addEventListener('change', () => { window.HQ_STATE[key] = c.checked; redraw(); });
+  }
+  const reset = byId('hq-reset');
   if (reset) reset.addEventListener('click', () => {
-    window.SB_STATE = { q: '', kind: '', cat: '', onlyNew: false, onlyDup: false };
-    if (q) q.value = ''; if (kind) kind.value = ''; if (nw) nw.checked = false; if (dp) dp.checked = false;
-    for (const sel of document.querySelectorAll('#sb-cat')) sel.value = '';
+    Object.assign(window.HQ_STATE, { q: '', kind: '', div: '', onlyNew: false, onlyDup: false, onlyBranch: false });
+    if (q) q.value = ''; if (kind) kind.value = ''; if (dv) dv.value = '';
+    for (const id of ['hq-new', 'hq-dup', 'hq-branch']) { const c = byId(id); if (c) c.checked = false; }
     redraw();
   });
 </script>

@@ -287,6 +287,9 @@ def main():
             if len(it["description"]) > len(m["description"]):
                 m["description"] = it["description"]
 
+    # « nouveau » = apparu après le tout premier inventaire, il y a 7 jours au plus.
+    baseline = min((v.get("first_seen", today) for v in previous.values()), default="")
+    recent = (dt.date.today() - dt.timedelta(days=7)).isoformat()
     items = []
     for key, it in merged.items():
         fams = {cfg["repos"][r]["family"] for r in it["repos"] if r in cfg["repos"]}
@@ -299,7 +302,8 @@ def main():
             "repos": it["repos"], "path": it["paths"][0], "description": it["description"],
             "duplicate": len(it["repos"]) > 1, "first_seen": first_seen,
             "branch": it.get("branch", ""),
-            "new": prev is None and bool(previous),
+            "new": (prev is None and bool(previous)) or (
+                bool(baseline) and baseline < first_seen >= recent),
         })
     items.sort(key=lambda i: (i["category"], i["kind"], i["name"].lower()))
 
@@ -337,6 +341,30 @@ def main():
         json.dumps(flat, ensure_ascii=False), encoding="utf-8")
     (out_path.parent / "repos.json").write_text(
         json.dumps(repos, ensure_ascii=False), encoding="utf-8")
+
+    # Catalogue compact pour l'agent quartier-general : une ligne par élément, facile à grep.
+    lines = [
+        "# Catalogue des skills et agents",
+        "",
+        f"Généré le {board['generated_at']} par board/build_board.py. Une ligne par élément :",
+        "`- nom | Skill/Agent | dépôts | étiquettes | description courte | chemin`.",
+        "Cherche par mot-clé (grep -i) plutôt que de tout lire. Les cases sont les titres `##`.",
+        "",
+    ]
+    for c in board["categories"]:
+        group = [i for i in items if i["category"] == c["id"]]
+        if not group:
+            continue
+        lines.append(f"## {c['label']} ({len(group)})")
+        for i in group:
+            tags = [t for t, on in (("nouveau", i["new"]), ("double", i["duplicate"]),
+                                    (f"branche {i.get('branch')}", bool(i.get("branch")))) if on]
+            desc = i["description"].replace("|", "/")
+            desc = desc[:160] + ("…" if len(desc) > 160 else "")
+            lines.append(f"- {i['name']} | {'Agent' if i['kind'] == 'agent' else 'Skill'} | "
+                         f"{', '.join(i['repos'])} | {', '.join(tags) or '-'} | {desc} | {i['path']}")
+        lines.append("")
+    (out_path.parent / "catalog.md").write_text("\n".join(lines), encoding="utf-8")
     s = board["stats"]
     print(f"{s['skills']} skills, {s['agents']} agents, {s['duplicates']} doublons, "
           f"{s['new']} nouveaux, {len(removed)} retirés -> {out_path}")

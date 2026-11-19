@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19 08:08 UTC",
+ "generated_at": "2026-11-19 08:25 UTC",
  "categories": [
   {
    "id": "security",
@@ -72,8 +72,8 @@
    "goal": "Collection de skills multi-domaines + Founding Council d'agents",
    "family": "Bibliothèques de skills & agents",
    "present": true,
-   "skills": 188,
-   "agents": 14
+   "skills": 189,
+   "agents": 15
   },
   {
    "name": "skills",
@@ -251,6 +251,21 @@
    "first_seen": "2026-11-18",
    "branch": "",
    "new": false
+  },
+  {
+   "name": "quartier-general",
+   "kind": "agent",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "some_claude_skills"
+   ],
+   "path": "some_claude_skills/.claude/agents/quartier-general/AGENT.md",
+   "description": "Chef d'orchestre de tous les skills et agents. À appeler EN PREMIER pour toute demande qui n'a pas d'outil évident, ou quand l'utilisateur demande « quel skill / quel agent utiliser ». Lit le catalogue du board, choisit les skills à charger et les agents à lancer (dans quel ordre, en parallèle ou non) et renvoie un ordre de mission prêt à exécuter. Ne fait pas le travail lui-même.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
   },
   {
    "name": "weaver",
@@ -1518,6 +1533,21 @@
    "first_seen": "2026-11-18",
    "branch": "",
    "new": false
+  },
+  {
+   "name": "qg",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "some_claude_skills"
+   ],
+   "path": "some_claude_skills/.claude/skills/qg/SKILL.md",
+   "description": "Quartier général. Passe une demande au QG, qui choisit parmi tous les skills et agents de l'utilisateur ceux qui conviennent, puis exécute l'ordre de mission. Activer sur \"/qg <demande>\", \"qg\", \"quartier général\", \"quel skill utiliser\", \"quel agent utiliser\", \"qui doit s'en occuper\". NOT pour une demande qui nomme déjà le skill ou l'agent à utiliser.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
   },
   {
    "name": "recsys-pipeline-architect",
@@ -9924,9 +9954,9 @@
  ],
  "removed": [],
  "stats": {
-  "skills": 551,
-  "agents": 85,
+  "skills": 552,
+  "agents": 86,
   "duplicates": 3,
-  "new": 13
+  "new": 15
  }
 }
