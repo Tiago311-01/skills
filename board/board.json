@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19 08:25 UTC",
+ "generated_at": "2026-11-19 08:29 UTC",
  "categories": [
   {
    "id": "security",
@@ -96,7 +96,7 @@
    "goal": "Regarder une vidéo : images horodatées + transcription (/watch)",
    "family": "Vidéo",
    "present": true,
-   "skills": 14,
+   "skills": 1,
    "agents": 0
   },
   {
@@ -113,6 +113,38 @@
    "family": "Serveurs MCP (contexte & outils)",
    "present": true,
    "skills": 1,
+   "agents": 0
+  },
+  {
+   "name": "caveman",
+   "goal": "Réponses courtes et moins de tokens lus (voix caveman, cavecrew)",
+   "family": "Rédaction & économie de tokens",
+   "present": true,
+   "skills": 22,
+   "agents": 3
+  },
+  {
+   "name": "stop-slop",
+   "goal": "Retirer les tics d'écriture IA d'un texte",
+   "family": "Rédaction & économie de tokens",
+   "present": true,
+   "skills": 1,
+   "agents": 0
+  },
+  {
+   "name": "ui-ux-pro-max-skill",
+   "goal": "Design UI/UX : styles, palettes, polices, design systems, marque, slides",
+   "family": "Design UI/UX",
+   "present": true,
+   "skills": 7,
+   "agents": 0
+  },
+  {
+   "name": "remotion",
+   "goal": "Créer des vidéos en React (rendu MP4, sous-titres, Studio) : skills officiels",
+   "family": "Vidéo",
+   "present": true,
+   "skills": 13,
    "agents": 0
   }
  ],
@@ -131,6 +163,36 @@
    "first_seen": "2026-11-18",
    "branch": "",
    "new": false
+  },
+  {
+   "name": "cavecrew-builder",
+   "kind": "agent",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/agents/cavecrew-builder.md",
+   "description": "Surgical 1-2 file edit. Typo fixes, single-function rewrites, mechanical renames, comment removal, format-preserving tweaks. Hard refuses 3+ file scope. Returns caveman diff receipt. Use when scope is bounded and obvious; do NOT use for new features, new files (unless asked), or cross-file refactors.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "cavecrew-investigator",
+   "kind": "agent",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/agents/cavecrew-investigator.md",
+   "description": "Read-only code locator. Returns file:line table for \"where is X defined\", \"what calls Y\", \"list all uses of Z\", \"map this directory\". Output is caveman-compressed, one row per hit, to keep main-thread context small. Refuses to suggest fixes.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
   },
   {
    "name": "chief-of-staff",
@@ -217,21 +279,6 @@
    ],
    "path": "ECC/agents/loop-operator.md",
    "description": "Operate autonomous agent loops, monitor progress, and intervene safely when loops stall.",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
-   "name": "opensource-packager",
-   "kind": "agent",
-   "category": "ai",
-   "also": [],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/agents/opensource-packager.md",
-   "description": "Generate complete open-source packaging for a sanitized project. Produces CLAUDE.md, setup.sh, README.md, LICENSE, CONTRIBUTING.md, and GitHub issue templates. Makes any repo immediately usable with Claude Code. Third stage of the opensource-pipeline skill.",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -360,6 +407,21 @@
    "new": false
   },
   {
+   "name": "agent-introspection-debugging",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/skills/agent-introspection-debugging/SKILL.md",
+   "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports. Use when an agent run fails and you need a reproducible diagnosis instead of a retry.",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
    "name": "agent-security-hardening",
    "kind": "skill",
    "category": "ai",
@@ -453,7 +515,9 @@
    "name": "ai-first-engineering",
    "kind": "skill",
    "category": "ai",
-   "also": [],
+   "also": [
+    "review"
+   ],
    "repos": [
     "ECC"
    ],
@@ -566,6 +630,231 @@
    ],
    "path": "ECC/skills/blueprint/SKILL.md",
    "description": "Turn a one-line objective into a step-by-step construction plan for multi-session, multi-agent engineering projects: one-PR-sized steps with self-contained context briefs, dependency graph with parallel-step detection, adversarial review gate, and plan mutation protocol. Use when planning a large feature, refactor, or roadmap that spans multiple PRs or sessions; not for single-PR tasks or when the",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
+   "name": "cavecrew",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/cavecrew/SKILL.md",
+   "description": "When to delegate to `cavecrew-investigator` (locate code), `cavecrew-builder` (1-2 file edit) or `cavecrew-reviewer` (diff review) instead of working inline or using `Explore`. Their output is compressed, so main context lasts longer.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman/SKILL.md",
+   "description": "Terse caveman voice: answer first, fluff gone, every technical fact kept. Use for /caveman, \"caveman mode\", \"talk like caveman\", \"be brief\", \"less tokens\". Stays on until \"stop caveman\" or \"normal mode\".",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-commit",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-commit/SKILL.md",
+   "description": "Write a Conventional Commits message compressed to intent only. Use for \"write a commit\", \"commit message\", /commit or /caveman-commit.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-compress",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-compress/SKILL.md",
+   "description": "Compress a memory file such as CLAUDE.md or a todo list into caveman format to save input tokens, keeping a readable backup. Sends the file's text to the configured model provider. Trigger: /caveman-compress.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-discover",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-discover/SKILL.md",
+   "description": "Find and label every LLM workflow in the repository so Caveman Cloud groups spend by workflow instead of one bucket. Use for \"discover workflows\" or breaking LLM spend down by workflow.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-evidence-review",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-evidence-review/SKILL.md",
+   "description": "Read-only review of Caveman Cloud evidence: cost, Cave Score, workflows, traces, latency, errors, routing, savings. Use when asked what Caveman found or where LLM spend goes.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-explore",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-explore/SKILL.md",
+   "description": "Read-only repository explorer for cold-start orientation, broad cross-file localization, or when a direct search failed. Skip it when the exact file or symbol is already named. Returns path:line citations only; its reads stay out of main context.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-help",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-help/SKILL.md",
+   "description": "Quick-reference card for the three caveman skills and their commands. Trigger: /caveman-help or \"caveman help\".",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-learn",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-learn/SKILL.md",
+   "description": "Act on a Caveman learn report - review the ranked token sinks, apply cost-lowering fixes with per-edit consent, and report what those fixes returned. Use when asked to lower an agent's token cost, what caveman has saved, to trim a heavy CLAUDE.md, or to offload re-pasted context into cavemem.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-manage",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-manage/SKILL.md",
+   "description": "Inspect Caveman Cloud's experiment lifecycle and block unsafe execution. Use when asked to start, approve, cancel, promote or roll back a Caveman experiment.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-optimize",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-optimize/SKILL.md",
+   "description": "Turn a Caveman optimization observation into an operator-chosen candidate with a paired baseline evaluation. Use when asked to inspect or evaluate a Caveman optimization report. Needs explicit approval.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-review",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-review/SKILL.md",
+   "description": "Compressed code review - one line per finding with location, problem and fix. Use for /caveman-review, \"review this PR\", or \"review the diff\".",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-setup",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-setup/SKILL.md",
+   "description": "Wire a repository through the Caveman Cloud gateway so every LLM request is measured, with no behavior change. Use for \"set up caveman\" or adding LLM spend observability.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "caveman-stats",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/caveman-stats/SKILL.md",
+   "description": "Show recorded output and cache-read token usage and mode attribution for the current Claude Code session, or locate the host's native usage report. Trigger: /caveman-stats.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "checklist-discipline",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "some_claude_skills"
+   ],
+   "path": "some_claude_skills/.claude/skills/checklist-discipline/SKILL.md",
+   "description": "Design and implement systematic checklists that reduce errors by 30-50% in complex, high-stakes domains (medicine, aviation, construction, finance). NOT for simple tasks or when comprehensive",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -787,9 +1076,7 @@
    "name": "council",
    "kind": "skill",
    "category": "ai",
-   "also": [
-    "ops"
-   ],
+   "also": [],
    "repos": [
     "ECC"
    ],
@@ -810,6 +1097,21 @@
    ],
    "path": "ECC/skills/council-multi-model/SKILL.md",
    "description": "Add one optional external Codex critique after the existing council has produced a decision draft. Use when an ambiguous, high-consequence decision would benefit from a separate model invocation's attempt to break the synthesis. Requires explicit consent before sending the compact draft and disagreement to OpenAI, labels same-provider reviews honestly, and marks the review absent when the adapter ",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
+   "name": "counterparty-channel-discipline",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/skills/counterparty-channel-discipline/SKILL.md",
+   "description": "Per-channel strict prompts, mention gating, silent observation, and a communication autonomy policy for agents that sit in shared channels with external counterparties. Use when an agent joins group chats, shared channels, or DMs where outsiders can read every message and you need it to speak only when addressed, never leak internal context, and route risky content to draft-only approval.",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -986,9 +1288,7 @@
    "name": "evm-token-decimals",
    "kind": "skill",
    "category": "ai",
-   "also": [
-    "ops"
-   ],
+   "also": [],
    "repos": [
     "ECC"
    ],
@@ -1259,6 +1559,21 @@
    "new": false
   },
   {
+   "name": "megacave",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/megacave/SKILL.md",
+   "description": "Caveman in Classical Chinese: 文言文 register, far fewer characters, technical terms verbatim. Invoke only with /megacave or /caveman wenyan. Stays on until \"stop caveman\" or \"normal mode\".",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
    "name": "ml-adoption-playbook",
    "kind": "skill",
    "category": "ai",
@@ -1351,23 +1666,6 @@
    "new": false
   },
   {
-   "name": "nodejs-keccak256",
-   "kind": "skill",
-   "category": "ai",
-   "also": [
-    "lang"
-   ],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/skills/nodejs-keccak256/SKILL.md",
-   "description": "Prevent Ethereum hashing bugs in JavaScript and TypeScript. Node's sha3-256 is NIST SHA3, not Ethereum Keccak-256, and silently breaks selectors, signatures, storage slots, and address derivation. Use when hashing for Ethereum in JavaScript or TypeScript, or when a selector, signature, storage slot, or derived address is wrong.",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
    "name": "openclaw-persona-forge",
    "kind": "skill",
    "category": "ai",
@@ -1407,6 +1705,21 @@
    ],
    "path": "ECC/skills/orch-add-feature/SKILL.md",
    "description": "Orchestrate building a brand-new feature end to end — research, plan, TDD implementation, review, and gated commit — by delegating each phase to the matching ECC agent. Use when adding a capability that does not exist yet.",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
+   "name": "orch-build-mvp",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/skills/orch-build-mvp/SKILL.md",
+   "description": "Orchestrate bootstrapping a working MVP from a design or spec document — ingest the SDD/PRD, plan thin vertical slices, scaffold the first end-to-end slice, then drive a generator-evaluator build loop with review and gated feat commits. Use when a design or spec document must become a running MVP through planned vertical slices.",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -1550,6 +1863,23 @@
    "new": true
   },
   {
+   "name": "ralphinho-rfc-pipeline",
+   "kind": "skill",
+   "category": "ai",
+   "also": [
+    "test"
+   ],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/skills/ralphinho-rfc-pipeline/SKILL.md",
+   "description": "Split an RFC into a multi-agent execution DAG — decompose into work units with dependencies and acceptance tests, run research, plan, implement, test, and review per unit, then merge through a queue with re-based branches and final system verification. Use when a feature is too large for a single agent pass, orchestrating RFC-driven multi-agent execution, or managing merge queues across agent-buil",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
    "name": "recsys-pipeline-architect",
    "kind": "skill",
    "category": "ai",
@@ -1676,9 +2006,7 @@
    "name": "skill-documentarian",
    "kind": "skill",
    "category": "ai",
-   "also": [
-    "content"
-   ],
+   "also": [],
    "repos": [
     "some_claude_skills"
    ],
@@ -1876,6 +2204,21 @@
    "new": false
   },
   {
+   "name": "ultracave",
+   "kind": "skill",
+   "category": "ai",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/ultracave/SKILL.md",
+   "description": "Caveman at maximum compression: fragments, one word when one word is enough, each fact once. Invoke only with /ultracave or /caveman ultra. Stays on until \"stop caveman\" or \"normal mode\".",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
    "name": "unified-memory",
    "kind": "skill",
    "category": "ai",
@@ -1895,7 +2238,8 @@
    "kind": "skill",
    "category": "ai",
    "also": [
-    "business"
+    "business",
+    "ops"
    ],
    "repos": [
     "ECC"
@@ -2263,6 +2607,23 @@
    "new": false
   },
   {
+   "name": "django-patterns",
+   "kind": "skill",
+   "category": "archi",
+   "also": [
+    "lang"
+   ],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/skills/django-patterns/SKILL.md",
+   "description": "Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps. Use when building or reviewing Django apps, DRF APIs, ORM queries, or caching.",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
    "name": "drizzle-migrations",
    "kind": "skill",
    "category": "archi",
@@ -2323,21 +2684,6 @@
    ],
    "path": "some_claude_skills/.claude/skills/event-detection-temporal-intelligence-expert/SKILL.md",
    "description": "Expert in temporal event detection, spatio-temporal clustering (ST-DBSCAN), and photo context understanding. Use for detecting photo events, clustering by time/location, shareability prediction,",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
-   "name": "fastapi-patterns",
-   "kind": "skill",
-   "category": "archi",
-   "also": [],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/skills/fastapi-patterns/SKILL.md",
-   "description": "FastAPI best practices covering project structure, Pydantic v2 schemas, dependency injection, async handlers, authentication, authorization, transactional service layers, and testing with httpx and pytest. Use when building or reviewing FastAPI apps — Pydantic schemas, dependencies, async handlers, auth, or tests.",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -2436,6 +2782,21 @@
    "new": false
   },
   {
+   "name": "migration",
+   "kind": "skill",
+   "category": "archi",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/migration/SKILL.md",
+   "description": "Implement reversible compatibility-safe transitions. Use for schema, data, API, protocol, configuration, or dependency migrations requiring rollback and preservation proof.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
    "name": "modern-auth-2026",
    "kind": "skill",
    "category": "archi",
@@ -2499,7 +2860,9 @@
    "name": "openapi-spec-writer",
    "kind": "skill",
    "category": "archi",
-   "also": [],
+   "also": [
+    "content"
+   ],
    "repos": [
     "some_claude_skills"
    ],
@@ -2762,9 +3125,7 @@
    "name": "competitive-platform-analysis",
    "kind": "skill",
    "category": "business",
-   "also": [
-    "life"
-   ],
+   "also": [],
    "repos": [
     "ECC"
    ],
@@ -3080,6 +3441,21 @@
    "first_seen": "2026-11-18",
    "branch": "",
    "new": false
+  },
+  {
+   "name": "lean-build",
+   "kind": "skill",
+   "category": "business",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/lean-build/SKILL.md",
+   "description": "Build feature work with high overbuilding risk. Use for new behavior, product slices, or integrations where repository reuse, strict scope, and an explicit stop condition matter.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
   },
   {
    "name": "logistics-exception-management",
@@ -3989,6 +4365,21 @@
    "new": false
   },
   {
+   "name": "stop-slop",
+   "kind": "skill",
+   "category": "content",
+   "also": [],
+   "repos": [
+    "stop-slop"
+   ],
+   "path": "stop-slop/SKILL.md",
+   "description": "Remove AI writing patterns from prose. Use when drafting, editing, or reviewing text to eliminate predictable AI tells.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
    "name": "technical-writer",
    "kind": "skill",
    "category": "content",
@@ -4218,6 +4609,21 @@
    "new": false
   },
   {
+   "name": "drone-inspection-specialist",
+   "kind": "skill",
+   "category": "data",
+   "also": [],
+   "repos": [
+    "some_claude_skills"
+   ],
+   "path": "some_claude_skills/.claude/skills/drone-inspection-specialist/SKILL.md",
+   "description": "Advanced CV for infrastructure inspection including forest fire detection, wildfire precondition assessment, roof inspection, hail damage analysis, thermal imaging, and 3D Gaussian Splatting",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
    "name": "feature-manifest",
    "kind": "skill",
    "category": "data",
@@ -4373,9 +4779,7 @@
    "name": "scientific-pkg-gget",
    "kind": "skill",
    "category": "data",
-   "also": [
-    "ops"
-   ],
+   "also": [],
    "repos": [
     "ECC"
    ],
@@ -4396,21 +4800,6 @@
    ],
    "path": "ECC/agents/a11y-architect.md",
    "description": "Accessibility Architect specializing in WCAG 2.2 compliance for Web and Native platforms. Use PROACTIVELY when designing UI components, establishing design systems, or auditing code for inclusive user experiences.",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
-   "name": "build-error-resolver",
-   "kind": "agent",
-   "category": "design",
-   "also": [],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/agents/build-error-resolver.md",
-   "description": "Build and TypeScript error resolution specialist. Use PROACTIVELY when build fails or type errors occur. Fixes build/type errors only with minimal diffs, no architectural edits. Focuses on getting the build green quickly.",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -4479,6 +4868,36 @@
    "first_seen": "2026-11-18",
    "branch": "",
    "new": false
+  },
+  {
+   "name": "banner-design",
+   "kind": "skill",
+   "category": "design",
+   "also": [],
+   "repos": [
+    "ui-ux-pro-max-skill"
+   ],
+   "path": "ui-ux-pro-max-skill/.claude/skills/banner-design/SKILL.md",
+   "description": "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with optional generated or supplied visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorph",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
+   "name": "brand",
+   "kind": "skill",
+   "category": "design",
+   "also": [],
+   "repos": [
+    "ui-ux-pro-max-skill"
+   ],
+   "path": "ui-ux-pro-max-skill/.claude/skills/brand/SKILL.md",
+   "description": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
   },
   {
    "name": "brand-discovery",
@@ -4571,6 +4990,21 @@
    "new": false
   },
   {
+   "name": "design",
+   "kind": "skill",
+   "category": "design",
+   "also": [],
+   "repos": [
+    "ui-ux-pro-max-skill"
+   ],
+   "path": "ui-ux-pro-max-skill/.claude/skills/design/SKILL.md",
+   "description": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini, Atlas Cloud, MuAPI, or UberLLM AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, c",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
    "name": "design-accessibility-auditor",
    "kind": "skill",
    "category": "design",
@@ -4636,11 +5070,12 @@
    "category": "design",
    "also": [],
    "repos": [
-    "ECC"
+    "ECC",
+    "ui-ux-pro-max-skill"
    ],
    "path": "ECC/skills/design-system/SKILL.md",
    "description": "Generate a design system from an existing codebase or audit one for visual consistency: extract tokens (colors, typography, spacing, shadows) into design-tokens.json and CSS custom properties with DESIGN.md rationale and an interactive HTML preview, score the UI across 10 dimensions, and flag AI-slop patterns. Use when starting a design system, auditing visual consistency before a redesign, or rev",
-   "duplicate": false,
+   "duplicate": true,
    "first_seen": "2026-11-18",
    "branch": "",
    "new": false
@@ -4666,9 +5101,7 @@
    "name": "design-system-documenter",
    "kind": "skill",
    "category": "design",
-   "also": [
-    "content"
-   ],
+   "also": [],
    "repos": [
     "some_claude_skills"
    ],
@@ -4958,23 +5391,6 @@
    "new": false
   },
   {
-   "name": "orch-build-mvp",
-   "kind": "skill",
-   "category": "design",
-   "also": [
-    "ai"
-   ],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/skills/orch-build-mvp/SKILL.md",
-   "description": "Orchestrate bootstrapping a working MVP from a design or spec document — ingest the SDD/PRD, plan thin vertical slices, scaffold the first end-to-end slice, then drive a generator-evaluator build loop with review and gated feat commits. Use when a design or spec document must become a running MVP through planned vertical slices.",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
    "name": "photo-composition-critic",
    "kind": "skill",
    "category": "design",
@@ -5035,6 +5451,21 @@
    "first_seen": "2026-11-18",
    "branch": "",
    "new": false
+  },
+  {
+   "name": "slides",
+   "kind": "skill",
+   "category": "design",
+   "also": [],
+   "repos": [
+    "ui-ux-pro-max-skill"
+   ],
+   "path": "ui-ux-pro-max-skill/.claude/skills/slides/SKILL.md",
+   "description": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
   },
   {
    "name": "swiss-modern-web-designer",
@@ -5133,6 +5564,21 @@
    "new": false
   },
   {
+   "name": "ui-styling",
+   "kind": "skill",
+   "category": "design",
+   "also": [],
+   "repos": [
+    "ui-ux-pro-max-skill"
+   ],
+   "path": "ui-ux-pro-max-skill/.claude/skills/ui-styling/SKILL.md",
+   "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating vis",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
    "name": "ui-to-vue",
    "kind": "skill",
    "category": "design",
@@ -5146,6 +5592,21 @@
    "first_seen": "2026-11-18",
    "branch": "",
    "new": false
+  },
+  {
+   "name": "ui-ux-pro-max",
+   "kind": "skill",
+   "category": "design",
+   "also": [],
+   "repos": [
+    "ui-ux-pro-max-skill"
+   ],
+   "path": "ui-ux-pro-max-skill/.claude/skills/ui-ux-pro-max/SKILL.md",
+   "description": "UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation. Searchable local data: 80 searchable styles (51 active), 194 product palettes and reasoning profiles, ",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
   },
   {
    "name": "ux-friction-analyzer",
@@ -5574,66 +6035,6 @@
    "new": false
   },
   {
-   "name": "django-patterns",
-   "kind": "skill",
-   "category": "lang",
-   "also": [],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/skills/django-patterns/SKILL.md",
-   "description": "Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps. Use when building or reviewing Django apps, DRF APIs, ORM queries, or caching.",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
-   "name": "django-security",
-   "kind": "skill",
-   "category": "lang",
-   "also": [],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/skills/django-security/SKILL.md",
-   "description": "Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations. Use when reviewing Django authentication, authorization, input handling, or deployment settings.",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
-   "name": "django-tdd",
-   "kind": "skill",
-   "category": "lang",
-   "also": [],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/skills/django-tdd/SKILL.md",
-   "description": "Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs. Use when writing Django or DRF tests with pytest-django, or driving a Django feature test-first.",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
-   "name": "django-verification",
-   "kind": "skill",
-   "category": "lang",
-   "also": [],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/skills/django-verification/SKILL.md",
-   "description": "Run the full Django verification loop — environment check, mypy/ruff/black linting, migration safety, pytest with coverage targets, pip-audit and bandit security scans, settings and logging review, and diff review — producing a phased pass/fail report before release or PR. Use when preparing a Django pull request, validating migrations or coverage, or running pre-deploy readiness checks.",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
    "name": "dotnet-patterns",
    "kind": "skill",
    "category": "lang",
@@ -5643,6 +6044,23 @@
    ],
    "path": "ECC/skills/dotnet-patterns/SKILL.md",
    "description": "Idiomatic C# and .NET patterns, conventions, dependency injection, async/await, and best practices for building robust, maintainable .NET applications. Use when writing or reviewing C# / .NET code — DI, async, or general conventions.",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
+   "name": "fastapi-patterns",
+   "kind": "skill",
+   "category": "lang",
+   "also": [
+    "archi"
+   ],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/skills/fastapi-patterns/SKILL.md",
+   "description": "FastAPI best practices covering project structure, Pydantic v2 schemas, dependency injection, async handlers, authentication, authorization, transactional service layers, and testing with httpx and pytest. Use when building or reviewing FastAPI apps — Pydantic schemas, dependencies, async handlers, auth, or tests.",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -5927,12 +6345,25 @@
    "new": false
   },
   {
+   "name": "nodejs-keccak256",
+   "kind": "skill",
+   "category": "lang",
+   "also": [],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/skills/nodejs-keccak256/SKILL.md",
+   "description": "Prevent Ethereum hashing bugs in JavaScript and TypeScript. Node's sha3-256 is NIST SHA3, not Ethereum Keccak-256, and silently breaks selectors, signatures, storage slots, and address derivation. Use when hashing for Ethereum in JavaScript or TypeScript, or when a selector, signature, storage slot, or derived address is wrong.",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
    "name": "nuxt4-patterns",
    "kind": "skill",
    "category": "lang",
-   "also": [
-    "design"
-   ],
+   "also": [],
    "repos": [
     "ECC"
    ],
@@ -6072,7 +6503,9 @@
    "name": "react-performance",
    "kind": "skill",
    "category": "lang",
-   "also": [],
+   "also": [
+    "ops"
+   ],
    "repos": [
     "ECC"
    ],
@@ -6694,6 +7127,23 @@
    "new": false
   },
   {
+   "name": "opensource-packager",
+   "kind": "agent",
+   "category": "ops",
+   "also": [
+    "ai"
+   ],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/agents/opensource-packager.md",
+   "description": "Generate complete open-source packaging for a sanitized project. Produces CLAUDE.md, setup.sh, README.md, LICENSE, CONTRIBUTING.md, and GitHub issue templates. Makes any repo immediately usable with Claude Code. Third stage of the opensource-pipeline skill.",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
    "name": "smith",
    "kind": "agent",
    "category": "ops",
@@ -6709,25 +7159,12 @@
    "new": false
   },
   {
-   "name": "checklist-discipline",
-   "kind": "skill",
-   "category": "ops",
-   "also": [],
-   "repos": [
-    "some_claude_skills"
-   ],
-   "path": "some_claude_skills/.claude/skills/checklist-discipline/SKILL.md",
-   "description": "Design and implement systematic checklists that reduce errors by 30-50% in complex, high-stakes domains (medicine, aviation, construction, finance). NOT for simple tasks or when comprehensive",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
    "name": "cisco-ios-patterns",
    "kind": "skill",
    "category": "ops",
-   "also": [],
+   "also": [
+    "lang"
+   ],
    "repos": [
     "ECC"
    ],
@@ -6748,23 +7185,6 @@
    ],
    "path": "some_claude_skills/.claude/skills/cloudflare-worker-dev/SKILL.md",
    "description": "Cloudflare Workers, KV, Durable Objects, and edge computing development. Use for serverless APIs, caching, rate limiting, real-time features. Activate on \"Workers\", \"KV\", \"Durable Objects\",",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
-   "name": "counterparty-channel-discipline",
-   "kind": "skill",
-   "category": "ops",
-   "also": [
-    "ai"
-   ],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/skills/counterparty-channel-discipline/SKILL.md",
-   "description": "Per-channel strict prompts, mention gating, silent observation, and a communication autonomy policy for agents that sit in shared channels with external counterparties. Use when an agent joins group chats, shared channels, or DMs where outsiders can read every message and you need it to speak only when addressed, never leak internal context, and route risky content to draft-only approval.",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -6804,9 +7224,7 @@
    "name": "docker-containerization",
    "kind": "skill",
    "category": "ops",
-   "also": [
-    "content"
-   ],
+   "also": [],
    "repos": [
     "some_claude_skills"
    ],
@@ -6822,31 +7240,13 @@
    "kind": "skill",
    "category": "ops",
    "also": [
-    "ai",
-    "content"
+    "ai"
    ],
    "repos": [
     "ECC"
    ],
    "path": "ECC/skills/docker-patterns/SKILL.md",
    "description": "Docker and Docker Compose patterns for local development, hardened CLI installer harnesses, container security, networking, volumes, and multi-service orchestration. Use when creating or reviewing Dockerfiles and Compose services, testing installers across Linux distributions, or planning accurate native macOS and Windows validation.",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
-   "name": "drone-inspection-specialist",
-   "kind": "skill",
-   "category": "ops",
-   "also": [
-    "data"
-   ],
-   "repos": [
-    "some_claude_skills"
-   ],
-   "path": "some_claude_skills/.claude/skills/drone-inspection-specialist/SKILL.md",
-   "description": "Advanced CV for infrastructure inspection including forest fire detection, wildfire precondition assessment, roof inspection, hail damage analysis, thermal imaging, and 3D Gaussian Splatting",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -7147,24 +7547,6 @@
    "new": false
   },
   {
-   "name": "scientific-thinking-literature-review",
-   "kind": "skill",
-   "category": "ops",
-   "also": [
-    "review",
-    "ai"
-   ],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/skills/scientific-thinking-literature-review/SKILL.md",
-   "description": "Systematic literature-review workflow for academic, biomedical, technical, and scientific topics, including search planning, source screening, synthesis, citation checks, and evidence logging. Use when the task is to find, screen, synthesize, and cite a body of academic or technical literature.",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
    "name": "site-reliability-engineer",
    "kind": "skill",
    "category": "ops",
@@ -7317,6 +7699,36 @@
    "new": false
   },
   {
+   "name": "build-error-resolver",
+   "kind": "agent",
+   "category": "review",
+   "also": [],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/agents/build-error-resolver.md",
+   "description": "Build and TypeScript error resolution specialist. Use PROACTIVELY when build fails or type errors occur. Fixes build/type errors only with minimal diffs, no architectural edits. Focuses on getting the build green quickly.",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
+   "name": "cavecrew-reviewer",
+   "kind": "agent",
+   "category": "review",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/agents/cavecrew-reviewer.md",
+   "description": "Diff/branch/file reviewer. One line per finding, severity-tagged, no praise, no scope creep. Output format `path:line: <emoji> <severity>: <problem>. <fix>.` Use for \"review this PR\", \"review my diff\", \"audit this file\". Skips formatting nits unless they change meaning.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
    "name": "code-reviewer",
    "kind": "agent",
    "category": "review",
@@ -7425,9 +7837,7 @@
    "name": "django-reviewer",
    "kind": "agent",
    "category": "review",
-   "also": [
-    "lang"
-   ],
+   "also": [],
    "repos": [
     "ECC"
    ],
@@ -7564,9 +7974,7 @@
    "name": "mle-reviewer",
    "kind": "agent",
    "category": "review",
-   "also": [
-    "ai"
-   ],
+   "also": [],
    "repos": [
     "ECC"
    ],
@@ -7797,23 +8205,6 @@
    ],
    "path": "ECC/agents/vue-reviewer.md",
    "description": "Expert Vue.js code reviewer specializing in Composition API correctness, reactivity pitfalls, component architecture, template security, and Vue-specific performance. Use for any change touching .vue, .ts/.js files with Vue imports, or Vue ecosystem code (Pinia, Vue Router, Nuxt). MUST BE USED for Vue projects.",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
-   "name": "agent-introspection-debugging",
-   "kind": "skill",
-   "category": "review",
-   "also": [
-    "ai"
-   ],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/skills/agent-introspection-debugging/SKILL.md",
-   "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports. Use when an agent run fails and you need a reproducible diagnosis instead of a retry.",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -8276,6 +8667,21 @@
    "new": false
   },
   {
+   "name": "safe-refactor",
+   "kind": "skill",
+   "category": "review",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/safe-refactor/SKILL.md",
+   "description": "Restructure code while preserving behavior. Use for extraction, consolidation, ownership moves, or cleanup where verification must bracket structural edits.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
+  },
+  {
    "name": "santa-method",
    "kind": "skill",
    "category": "review",
@@ -8294,11 +8700,28 @@
    "new": false
   },
   {
+   "name": "scientific-thinking-literature-review",
+   "kind": "skill",
+   "category": "review",
+   "also": [
+    "ai",
+    "data"
+   ],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/skills/scientific-thinking-literature-review/SKILL.md",
+   "description": "Systematic literature-review workflow for academic, biomedical, technical, and scientific topics, including search planning, source screening, synthesis, citation checks, and evidence logging. Use when the task is to find, screen, synthesize, and cite a body of academic or technical literature.",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
    "name": "social-graph-ranker",
    "kind": "skill",
    "category": "review",
    "also": [
-    "ops",
     "content"
    ],
    "repos": [
@@ -8310,6 +8733,23 @@
    "first_seen": "2026-11-18",
    "branch": "",
    "new": false
+  },
+  {
+   "name": "surgical-patch",
+   "kind": "skill",
+   "category": "review",
+   "also": [
+    "test"
+   ],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/surgical-patch/SKILL.md",
+   "description": "Fix bugs and small behavior changes at the narrowest responsible layer. Use when regression proof, preserved surrounding behavior, and task-relevant tests matter.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
   },
   {
    "name": "guardian",
@@ -8370,6 +8810,23 @@
    ],
    "path": "ECC/skills/defi-amm-security/SKILL.md",
    "description": "Security checklist for Solidity AMM contracts, liquidity pools, and swap flows. Covers reentrancy, CEI ordering, donation or inflation attacks, oracle manipulation, slippage, admin controls, and integer math. Use when auditing or writing Solidity AMM, liquidity pool, or swap code.",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
+   "name": "django-security",
+   "kind": "skill",
+   "category": "security",
+   "also": [
+    "lang"
+   ],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/skills/django-security/SKILL.md",
+   "description": "Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations. Use when reviewing Django authentication, authorization, input handling, or deployment settings.",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -8510,24 +8967,6 @@
    ],
    "path": "ECC/skills/quarkus-security/SKILL.md",
    "description": "Quarkus security implementation patterns: JWT and OIDC authentication, @RolesAllowed RBAC and SecurityIdentity checks, Bean Validation and custom validators, parameterized Panache queries, BCrypt password hashing, CORS and security headers, rate limiting, audit logging, Vault or environment-variable secrets, and dependency CVE scanning. Use when adding authentication or authorization, validating i",
-   "duplicate": false,
-   "first_seen": "2026-11-18",
-   "branch": "",
-   "new": false
-  },
-  {
-   "name": "ralphinho-rfc-pipeline",
-   "kind": "skill",
-   "category": "security",
-   "also": [
-    "ai",
-    "test"
-   ],
-   "repos": [
-    "ECC"
-   ],
-   "path": "ECC/skills/ralphinho-rfc-pipeline/SKILL.md",
-   "description": "Split an RFC into a multi-agent execution DAG — decompose into work units with dependencies and acceptance tests, run research, plan, implement, test, and review per unit, then merge through a queue with re-based branches and final system verification. Use when a feature is too large for a single agent pass, orchestrating RFC-driven multi-agent execution, or managing merge queues across agent-buil",
    "duplicate": false,
    "first_seen": "2026-11-18",
    "branch": "",
@@ -8679,8 +9118,7 @@
    "kind": "agent",
    "category": "test",
    "also": [
-    "review",
-    "design"
+    "review"
    ],
    "repos": [
     "ECC"
@@ -8711,9 +9149,7 @@
    "name": "ai-regression-testing",
    "kind": "skill",
    "category": "test",
-   "also": [
-    "ai"
-   ],
+   "also": [],
    "repos": [
     "ECC"
    ],
@@ -8821,6 +9257,41 @@
    "new": false
   },
   {
+   "name": "django-tdd",
+   "kind": "skill",
+   "category": "test",
+   "also": [
+    "lang"
+   ],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/skills/django-tdd/SKILL.md",
+   "description": "Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs. Use when writing Django or DRF tests with pytest-django, or driving a Django feature test-first.",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
+   "name": "django-verification",
+   "kind": "skill",
+   "category": "test",
+   "also": [
+    "lang",
+    "review"
+   ],
+   "repos": [
+    "ECC"
+   ],
+   "path": "ECC/skills/django-verification/SKILL.md",
+   "description": "Run the full Django verification loop — environment check, mypy/ruff/black linting, migration safety, pytest with coverage targets, pip-audit and bandit security scans, settings and logging review, and diff review — producing a phased pass/fail report before release or PR. Use when preparing a Django pull request, validating migrations or coverage, or running pre-deploy readiness checks.",
+   "duplicate": false,
+   "first_seen": "2026-11-18",
+   "branch": "",
+   "new": false
+  },
+  {
    "name": "e2e-testing",
    "kind": "skill",
    "category": "test",
@@ -8884,6 +9355,21 @@
    "first_seen": "2026-11-18",
    "branch": "",
    "new": false
+  },
+  {
+   "name": "investigate-first",
+   "kind": "skill",
+   "category": "test",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/investigate-first/SKILL.md",
+   "description": "Diagnose ambiguous failures before editing. Use for unknown causes, intermittent behavior, performance regressions, or investigations needing evidence-ranked hypotheses.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
   },
   {
    "name": "kotlin-testing",
@@ -9068,7 +9554,6 @@
    "kind": "skill",
    "category": "test",
    "also": [
-    "ops",
     "data"
    ],
    "repos": [
@@ -9159,6 +9644,21 @@
    "first_seen": "2026-11-18",
    "branch": "",
    "new": false
+  },
+  {
+   "name": "verify-and-stop",
+   "kind": "skill",
+   "category": "test",
+   "also": [],
+   "repos": [
+    "caveman"
+   ],
+   "path": "caveman/skills/verify-and-stop/SKILL.md",
+   "description": "Prove existing work meets acceptance conditions without expanding scope. Use for validation-only tasks, completion checks, focused gate runs, and last-mile proof.",
+   "duplicate": false,
+   "first_seen": "2026-11-19",
+   "branch": "",
+   "new": true
   },
   {
    "name": "vitest-testing-patterns",
@@ -9515,13 +10015,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-best-practices/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-best-practices/SKILL.md",
    "description": "Router for all Remotion skills",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9530,13 +10030,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-captions/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-captions/SKILL.md",
    "description": "Transcribing, displaying and animating captions",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9545,30 +10045,28 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-create/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-create/SKILL.md",
    "description": "Create a new Remotion video",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
    "name": "remotion-docs",
    "kind": "skill",
    "category": "video",
-   "also": [
-    "content"
-   ],
+   "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-docs/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-docs/SKILL.md",
    "description": "Search Remotion documentation",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9577,13 +10075,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-interactivity/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-interactivity/SKILL.md",
    "description": "Structures Remotion markup so layers, timing and styles are editable in Remotion Studio. Use when writing a new composition or restructuring existing markup.",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9592,13 +10090,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-license/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-license/SKILL.md",
    "description": "Find Remotion license information, FAQs, terms, and where to buy a license.",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9607,13 +10105,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-maps/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-maps/SKILL.md",
    "description": "Remotion Map animation knowledge",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9622,13 +10120,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-markup/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-markup/SKILL.md",
    "description": "Content, animation and effects best practices",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9637,13 +10135,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-multimedia/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-multimedia/SKILL.md",
    "description": "Interacting with Mediabunny",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9652,13 +10150,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-render/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-render/SKILL.md",
    "description": "Export a Remotion video, still image, or editable OpenTimelineIO timeline",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9667,13 +10165,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-saas/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-saas/SKILL.md",
    "description": "Build an app with Remotion",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9682,13 +10180,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-studio/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-studio/SKILL.md",
    "description": "Preview a Remotion video",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9712,13 +10210,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-upgrade/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-upgrade/SKILL.md",
    "description": "Upgrade Remotion, and related packages",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": true
   },
   {
@@ -9954,9 +10452,9 @@
  ],
  "removed": [],
  "stats": {
-  "skills": 552,
-  "agents": 86,
-  "duplicates": 3,
-  "new": 15
+  "skills": 581,
+  "agents": 89,
+  "duplicates": 4,
+  "new": 47
  }
 }

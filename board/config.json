@@ -66,6 +66,45 @@
         "magic-mcp/skills"
       ],
       "agents": []
+    },
+    "caveman": {
+      "goal": "Réponses courtes et moins de tokens lus (voix caveman, cavecrew)",
+      "family": "Rédaction & économie de tokens",
+      "url": "https://github.com/JuliusBrussee/caveman.git",
+      "skills": [
+        "caveman/skills"
+      ],
+      "agents": [
+        "caveman/agents"
+      ]
+    },
+    "stop-slop": {
+      "goal": "Retirer les tics d'écriture IA d'un texte",
+      "family": "Rédaction & économie de tokens",
+      "url": "https://github.com/hardikpandya/stop-slop.git",
+      "skills": [
+        "stop-slop"
+      ],
+      "agents": []
+    },
+    "ui-ux-pro-max-skill": {
+      "goal": "Design UI/UX : styles, palettes, polices, design systems, marque, slides",
+      "family": "Design UI/UX",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+      "skills": [
+        "ui-ux-pro-max-skill/.claude/skills"
+      ],
+      "agents": []
+    },
+    "remotion": {
+      "goal": "Créer des vidéos en React (rendu MP4, sous-titres, Studio) : skills officiels",
+      "family": "Vidéo",
+      "url": "https://github.com/remotion-dev/remotion.git",
+      "skills": [
+        "remotion/packages/skills/skills"
+      ],
+      "agents": []
     }
-  }
+  },
+  "_comment_sources": "Les dépôts qui ne sont pas à Tiago311-01 ont leur adresse dans 'url' : la tâche quotidienne les clone avec git clone --depth 1."
 }
