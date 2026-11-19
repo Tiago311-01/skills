@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19 08:14 UTC",
+ "generated_at": "2026-11-19 08:17 UTC",
  "categories": [
   {
    "id": "security",
@@ -96,7 +96,7 @@
    "goal": "Regarder une vidéo : images horodatées + transcription (/watch)",
    "family": "Vidéo",
    "present": true,
-   "skills": 14,
+   "skills": 1,
    "agents": 0
   },
   {
@@ -138,6 +138,14 @@
    "present": true,
    "skills": 7,
    "agents": 0
+  },
+  {
+   "name": "remotion",
+   "goal": "Créer des vidéos en React (rendu MP4, sous-titres, Studio) : skills officiels",
+   "family": "Vidéo",
+   "present": true,
+   "skills": 13,
+   "agents": 0
   }
  ],
  "items": [
@@ -169,7 +177,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "cavecrew-investigator",
@@ -184,7 +192,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "chief-of-staff",
@@ -623,7 +631,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman",
@@ -638,7 +646,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-commit",
@@ -653,7 +661,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-compress",
@@ -668,7 +676,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-discover",
@@ -683,7 +691,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-evidence-review",
@@ -698,7 +706,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-explore",
@@ -713,7 +721,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-help",
@@ -728,7 +736,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-learn",
@@ -743,7 +751,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-manage",
@@ -758,7 +766,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-optimize",
@@ -773,7 +781,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-review",
@@ -788,7 +796,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-setup",
@@ -803,7 +811,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "caveman-stats",
@@ -818,7 +826,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "ck",
@@ -1520,7 +1528,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "ml-adoption-playbook",
@@ -2045,7 +2053,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "strategic-compact",
@@ -2154,7 +2162,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "unified-memory",
@@ -2729,7 +2737,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "modern-auth-2026",
@@ -4297,7 +4305,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "technical-writer",
@@ -4804,7 +4812,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "brand",
@@ -4819,7 +4827,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "brand-discovery",
@@ -4924,7 +4932,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "design-accessibility-auditor",
@@ -5219,7 +5227,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "liquid-glass-design",
@@ -5517,7 +5525,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "ui-to-vue",
@@ -5547,7 +5555,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "ux-friction-analyzer",
@@ -7731,7 +7739,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "code-reviewer",
@@ -8705,7 +8713,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "santa-method",
@@ -8758,7 +8766,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "guardian",
@@ -9347,7 +9355,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "kotlin-testing",
@@ -9637,7 +9645,7 @@
    "duplicate": false,
    "first_seen": "2026-11-19",
    "branch": "",
-   "new": true
+   "new": false
   },
   {
    "name": "vitest-testing-patterns",
@@ -9994,13 +10002,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-best-practices/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-best-practices/SKILL.md",
    "description": "Router for all Remotion skills",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10009,13 +10017,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-captions/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-captions/SKILL.md",
    "description": "Transcribing, displaying and animating captions",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10024,13 +10032,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-create/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-create/SKILL.md",
    "description": "Create a new Remotion video",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10041,13 +10049,13 @@
     "content"
    ],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-docs/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-docs/SKILL.md",
    "description": "Search Remotion documentation",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10056,13 +10064,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-interactivity/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-interactivity/SKILL.md",
    "description": "Structures Remotion markup so layers, timing and styles are editable in Remotion Studio. Use when writing a new composition or restructuring existing markup.",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10071,13 +10079,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-license/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-license/SKILL.md",
    "description": "Find Remotion license information, FAQs, terms, and where to buy a license.",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10086,13 +10094,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-maps/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-maps/SKILL.md",
    "description": "Remotion Map animation knowledge",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10101,13 +10109,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-markup/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-markup/SKILL.md",
    "description": "Content, animation and effects best practices",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10116,13 +10124,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-multimedia/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-multimedia/SKILL.md",
    "description": "Interacting with Mediabunny",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10131,13 +10139,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-render/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-render/SKILL.md",
    "description": "Export a Remotion video, still image, or editable OpenTimelineIO timeline",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10146,13 +10154,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-saas/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-saas/SKILL.md",
    "description": "Build an app with Remotion",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10161,13 +10169,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-studio/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-studio/SKILL.md",
    "description": "Preview a Remotion video",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10191,13 +10199,13 @@
    "category": "video",
    "also": [],
    "repos": [
-    "claude-video"
+    "remotion"
    ],
-   "path": "claude-video/.claude/skills/remotion-upgrade/SKILL.md (branche claude/vertical-motion-design-video-39dqem)",
+   "path": "remotion/packages/skills/skills/remotion-upgrade/SKILL.md",
    "description": "Upgrade Remotion, and related packages",
    "duplicate": false,
    "first_seen": "2026-11-19",
-   "branch": "claude/vertical-motion-design-video-39dqem",
+   "branch": "",
    "new": false
   },
   {
@@ -10436,6 +10444,6 @@
   "skills": 580,
   "agents": 88,
   "duplicates": 4,
-  "new": 32
+  "new": 0
  }
 }
